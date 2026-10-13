@@ -14,20 +14,50 @@ export class PageTransition {
   init() {
     if (!this.curtain) return;
 
-    // Respect reduced motion
-    if (this.isReduced) {
+    // Respect reduced motion or skip-curtain class
+    if (this.isReduced || document.documentElement.classList.contains('skip-curtain')) {
       this.dismissImmediate();
       return;
     }
 
-    // Safety: ensure pageshow only dismisses if restored from browser bfcache
+    // Safety: ensure pageshow dismisses if restored from browser bfcache
     window.addEventListener('pageshow', (event) => {
       if (event.persisted) {
         this.dismissImmediate();
       }
     });
 
-    // Play initial brand intro animation
+    // Detect navigation type (reload vs back_forward vs navigate)
+    const navEntries = (window.performance && window.performance.getEntriesByType)
+      ? window.performance.getEntriesByType('navigation')
+      : [];
+    const navType = navEntries.length > 0
+      ? navEntries[0].type
+      : (window.performance && window.performance.navigation && window.performance.navigation.type === 1 ? 'reload' : 'navigate');
+
+    const isReload = navType === 'reload';
+    const isBackForward = navType === 'back_forward';
+
+    // Check if the user navigated back to Home from another page within the site
+    let isInternalNav = false;
+    if (document.referrer) {
+      try {
+        const refUrl = new URL(document.referrer, window.location.origin);
+        if (refUrl.origin === window.location.origin) {
+          isInternalNav = true;
+        }
+      } catch (e) {
+        isInternalNav = false;
+      }
+    }
+
+    // Skip loader immediately when navigating back to home internally or via history back/forward
+    if (!isReload && (isInternalNav || isBackForward)) {
+      this.dismissImmediate();
+      return;
+    }
+
+    // Only show loading on refresh or direct entrance/link paste
     this.playIntro();
   }
 

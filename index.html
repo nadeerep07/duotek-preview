@@ -108,6 +108,20 @@
   <!-- Design System CSS -->
   <link rel="stylesheet" href="css/main.css">
 
+  <!-- Navigation State: Suppress loader only when navigating back to home from internal screens -->
+  <script>
+    try {
+      var navEntries = (window.performance && window.performance.getEntriesByType)
+        ? window.performance.getEntriesByType('navigation')
+        : [];
+      var isReload = navEntries.length > 0
+        ? navEntries[0].type === 'reload'
+        : (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
+      if (!isReload && document.referrer && new URL(document.referrer, location.origin).origin === location.origin) {
+        document.documentElement.classList.add('skip-curtain');
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <!-- Page Transition & Brand Intro Curtain -->

@@ -821,7 +821,10 @@ body.modal-open {
   will-change: transform, opacity;
 }
 
-/* Curtain lifts smoothly on page entrance */
+/* Instantly suppress curtain when navigating back from internal pages */
+html.skip-curtain .page-curtain {
+  display: none !important;
+}
 
 /* =========================================
    Pure CSS Smooth Page Content Fade-In
