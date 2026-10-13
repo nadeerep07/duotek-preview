@@ -2870,6 +2870,31 @@
   transform: translateY(-1px);
 }
 
+@media (max-width: 1024px) {
+  .home-clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .discover-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .clients-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .home-clients-section,
+  .home-discover-section,
+  .clients-showcase-section,
+  .contact-page-section {
+    padding: 70px 24px;
+  }
+}
+
 @media (max-width: 900px) {
   .upcoming-body-grid {
     grid-template-columns: 1fr;
@@ -2887,4 +2912,123 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .home-clients-header {
+    margin-bottom: 36px;
+  }
+  .home-discover-header {
+    margin-bottom: 36px;
+  }
+  .discover-card {
+    padding: 32px 26px;
+  }
+  .showcase-client-card {
+    padding: 30px 24px;
+  }
+  .contact-form-panel {
+    padding: 32px 24px;
+  }
+  .home-clients-section,
+  .home-discover-section,
+  .clients-showcase-section,
+  .contact-page-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-clients-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .home-client-card {
+    padding: 26px 20px 22px;
+    border-radius: 18px;
+  }
+  .client-logo-box {
+    height: 64px;
+    margin-bottom: 16px;
+  }
+  .client-logo-box img {
+    max-height: 48px;
+    max-width: 75%;
+  }
+  .client-meta strong {
+    font-size: 15px;
+  }
+  .client-meta span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .home-clients-title {
+    font-size: clamp(22px, 6vw, 28px);
+    line-height: 1.25;
+  }
+  .discover-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .discover-card {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+  .discover-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .discover-card p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+  .discover-card-link {
+    font-size: 13.5px;
+  }
+  .showcase-client-card {
+    padding: 26px 20px;
+  }
+  .showcase-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contact-form-panel {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+  .home-clients-section,
+  .home-discover-section,
+  .clients-showcase-section,
+  .contact-page-section {
+    padding: 50px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-clients-title {
+    font-size: 20px;
+  }
+  .home-discover-header h2 {
+    font-size: 24px;
+  }
+  .discover-card {
+    padding: 24px 18px;
+  }
+  .home-client-card {
+    padding: 22px 16px 18px;
+  }
+  .client-logo-box {
+    height: 56px;
+    margin-bottom: 14px;
+  }
+  .client-logo-box img {
+    max-height: 44px;
+  }
+}
+
 
