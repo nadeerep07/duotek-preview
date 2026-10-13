@@ -1354,23 +1354,24 @@
 .footer-logo-link {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.96);
-  padding: 8px 18px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  transition: transform var(--duration-fast), box-shadow var(--duration-fast), background var(--duration-fast);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: transform var(--duration-fast), opacity var(--duration-fast);
   text-decoration: none;
 }
 
 .footer-logo-link:hover {
-  background: #ffffff;
+  background: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(255, 255, 255, 0.18);
+  opacity: 0.88;
+  box-shadow: none;
 }
 
 .footer-logo-img {
-  height: 34px;
+  height: 38px;
   width: auto;
   display: block;
   object-fit: contain;
