@@ -100,15 +100,23 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-  <!-- Typography: Manrope & DM Sans -->
+  <!-- Preconnect & Preloads for Fast Mobile Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="assets/images/hero-workspace.webp" type="image/webp" fetchpriority="high">
 
-  <!-- Design System CSS -->
+  <!-- Typography: Manrope & DM Sans (Non-blocking display=swap) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Design System CSS (Bundled single request, zero @import chains) -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Navigation State: Suppress loader only when navigating back to home from internal screens -->
+  <!-- Navigation State: Only run brand intro loader on reload/refresh; skip instantly on direct visits & audits -->
   <script>
     try {
       var navEntries = (window.performance && window.performance.getEntriesByType)
@@ -117,7 +125,7 @@
       var isReload = navEntries.length > 0
         ? navEntries[0].type === 'reload'
         : (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
-      if (!isReload && document.referrer && new URL(document.referrer, location.origin).origin === location.origin) {
+      if (!isReload) {
         document.documentElement.classList.add('skip-curtain');
       }
     } catch (e) {}
@@ -127,7 +135,7 @@
   <!-- Page Transition & Brand Intro Curtain -->
   <div id="page-curtain" class="page-curtain" aria-hidden="true">
     <div class="curtain-content">
-      <img class="curtain-logo" src="assets/images/duotek-logo-transparent.png" alt="Duotek Group">
+      <img class="curtain-logo" src="assets/images/duotek-logo-transparent.png" alt="Duotek Group" width="130" height="36">
       <div class="curtain-bar-wrap">
         <div class="curtain-bar"></div>
       </div>
@@ -143,7 +151,7 @@
   <!-- Site Header -->
   <header class="site-header">
     <a class="logo" href="index.html" aria-label="DUOTEK Information Technologies LLC">
-      <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img">
+      <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="130" height="36">
     </a>
     <nav class="nav" aria-label="Main Navigation">
       <a href="index.html" class="active">Home</a>
@@ -173,7 +181,7 @@
     <div class="mobile-nav-backdrop"></div>
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
-        <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img">
+        <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="130" height="36">
         <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
       </div>
       <nav class="mobile-nav-links" aria-label="Mobile Navigation">
@@ -260,7 +268,7 @@
                 </div>
               </div>
 
-              <img class="mobile-service-photo hero-primary-photo" src="assets/images/hero-workspace.webp" alt="Duotek contemporary workspace in the UAE" loading="eager">
+              <img class="mobile-service-photo hero-primary-photo" src="assets/images/hero-workspace.webp" alt="Duotek contemporary workspace in the UAE" fetchpriority="high" loading="eager" width="1500" height="844">
             </section>
 
             <!-- Chapter 01: IT AMC -->
@@ -277,7 +285,7 @@
                 <button type="button" class="cta-link" data-open-contact data-service="IT AMC – Annual Maintenance Contract">Request AMC proposal ↗</button>
                 <a class="secondary-link" href="services.html#service-card-A">See technical scope →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-amc.webp" alt="IT AMC maintenance visual" loading="lazy">
+              <img class="mobile-service-photo" src="assets/images/service-amc.webp" alt="IT AMC maintenance visual" loading="lazy" decoding="async" width="1672" height="940">
             </section>
 
             <!-- Chapter 02: Structured Cabling & Server Racks -->
@@ -294,7 +302,7 @@
                 <button type="button" class="cta-link" data-open-contact data-service="Structured Cabling Solutions">Inquire cabling &amp; racks ↗</button>
                 <a class="secondary-link" href="services.html#service-card-B">See cabling details →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack" loading="lazy">
+              <img class="mobile-service-photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 03: IP Telephony & 3CX PBX -->
@@ -311,7 +319,7 @@
                 <button type="button" class="cta-link" data-open-contact data-service="3CX IP PBX Solutions">Deploy 3CX telephony ↗</button>
                 <a class="secondary-link" href="services.html#service-card-D">View telephony scope →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX business phone system" loading="lazy">
+              <img class="mobile-service-photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX business phone system" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 04: CCTV & Access Control -->
@@ -328,7 +336,7 @@
                 <button type="button" class="cta-link" data-open-contact data-service="CCTV Surveillance Systems">Plan security setup ↗</button>
                 <a class="secondary-link" href="services.html#service-card-F">See security specs →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-security.webp" alt="CCTV security surveillance and access control" loading="lazy">
+              <img class="mobile-service-photo" src="assets/images/service-security.webp" alt="CCTV security surveillance and access control" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 05: Home Automation & Smart Living -->
@@ -345,18 +353,18 @@
                 <button type="button" class="cta-link" data-open-contact data-service="Home Automation & Smart Solutions">Automate your property ↗</button>
                 <a class="secondary-link" href="services.html#service-card-H">See automation features →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-automation.webp" alt="Smart home automation and ambient lighting" loading="lazy">
+              <img class="mobile-service-photo" src="assets/images/service-automation.webp" alt="Smart home automation and ambient lighting" loading="lazy" decoding="async" width="1500" height="844">
             </section>
           </div>
 
           <!-- Right Column: Sticky Photography -->
           <div class="photo-wrap" aria-hidden="true">
-            <img class="photo active" src="assets/images/hero-workspace.webp" alt="Contemporary technology workspace in UAE">
-            <img class="photo" src="assets/images/service-amc.webp" alt="IT AMC Annual Maintenance Contract visual">
-            <img class="photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack visual">
-            <img class="photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX phone system visual">
-            <img class="photo" src="assets/images/service-security.webp" alt="CCTV surveillance and access control visual">
-            <img class="photo" src="assets/images/service-automation.webp" alt="Smart automation and intelligent living visual">
+            <img class="photo active" src="assets/images/hero-workspace.webp" alt="Contemporary technology workspace in UAE" width="1500" height="844" fetchpriority="high">
+            <img class="photo" src="assets/images/service-amc.webp" alt="IT AMC Annual Maintenance Contract visual" width="1672" height="940" loading="lazy" decoding="async">
+            <img class="photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack visual" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX phone system visual" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="assets/images/service-security.webp" alt="CCTV surveillance and access control visual" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="assets/images/service-automation.webp" alt="Smart automation and intelligent living visual" width="1500" height="844" loading="lazy" decoding="async">
 
             <!-- Floating Caption Pill -->
             <span class="photo-caption">Duotek Group / UAE Technology Infrastructure</span>
@@ -377,7 +385,7 @@
         <div class="home-clients-grid">
           <div class="home-client-card" title="Aegon Shipping LLC — Maritime & Freight Logistics">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy">
+              <img src="assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy" decoding="async" width="176" height="80">
             </div>
             <div class="client-meta">
               <strong>Aegon Shipping LLC</strong>
@@ -387,7 +395,7 @@
 
           <div class="home-client-card" title="Regale Innovation Polyclinic — Healthcare & Medical Center">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy">
+              <img src="assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy" decoding="async" width="200" height="51">
             </div>
             <div class="client-meta">
               <strong>Regale Innovation Polyclinic</strong>
@@ -397,7 +405,7 @@
 
           <div class="home-client-card" title="Don Padel Sports Academy — Sports & Leisure Facilities">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy">
+              <img src="assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy" decoding="async" width="180" height="97">
             </div>
             <div class="client-meta">
               <strong>Don Padel Sports Academy</strong>
@@ -407,7 +415,7 @@
 
           <div class="home-client-card" title="Prompt Interiors — Commercial Contracting & Fit-Outs">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy">
+              <img src="assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy" decoding="async" width="204" height="50">
             </div>
             <div class="client-meta">
               <strong>Prompt Interiors</strong>
@@ -538,7 +546,7 @@
       <div class="footer-col footer-col-brand">
         <div class="footer-emblem-wrap">
           <a href="index.html" class="footer-logo-link" aria-label="DUOTEK Home">
-            <img src="assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img">
+            <img src="assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="144" height="40">
           </a>
         </div>
         <span class="footer-tagline-badge">Your IT Partner in the UAE</span>
@@ -713,10 +721,10 @@
     </div>
   </div>
 
-  <!-- External Animation & Scrolling Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <!-- External Animation & Scrolling Libraries (Deferred for non-blocking parse) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 
   <!-- Application Bootstrap -->
   <script type="module" src="js/main.js"></script>
