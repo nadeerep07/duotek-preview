@@ -1,0 +1,19 @@
+{
+  "name": "duotek-human-editorial",
+  "version": "1.0.0",
+  "description": "Duotek website — Human by Design editorial direction",
+  "private": true,
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "duotek",
+    "dubai",
+    "editorial-web-design",
+    "gsap",
+    "lenis"
+  ],
+  "author": "Duotek",
+  "license": "UNLICENSED"
+}

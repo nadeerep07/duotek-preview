@@ -1,0 +1,47 @@
+/**
+ * Duotek — Human by Design Design Tokens
+ */
+:root {
+  /* Core Color Palette */
+  --color-bg: #f3f0eb;
+  --color-bg-card: #f7f5f0d9;
+  --color-bg-card-solid: #f8f6f1;
+  --color-bg-end: #efe5d9;
+  --color-ink: #10191e;
+  --color-ink-subtle: #182126;
+  --color-text-muted: #536064;
+  --color-text-subtle: #748083;
+  --color-text-light: #8e9491;
+  --color-border: #d8d5cd;
+  --color-border-subtle: #d5d1ca;
+  --color-border-chapter: #d8d3cb;
+  --color-border-card: #ffffffce;
+
+  /* Warm Accent Identity */
+  --color-warm: #e77947;
+  --color-warm-dark: #b86444;
+  --color-warm-eyebrow: #b86d48;
+  --color-warm-ring: #e87a49;
+  --color-warm-ring-soft: #ecc4af;
+  --gradient-warm: linear-gradient(95deg, #e6932a, #e7744d, #dba79c);
+
+  /* Typography */
+  --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows & Glassmorphism */
+  --glass-blur: blur(20px);
+  --glass-caption-blur: blur(16px);
+  --shadow-card: 0 18px 45px rgba(37, 51, 48, 0.13);
+  --shadow-caption: 0 8px 25px rgba(26, 41, 39, 0.11);
+  --shadow-btn: 0 10px 30px rgba(16, 25, 30, 0.18);
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-photo: 0.65s;
+
+  /* Header & Heights */
+  --header-height: 91px;
+}

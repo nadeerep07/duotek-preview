@@ -1,0 +1,9 @@
+# Robots.txt for Duotek Group (DUOTEK Information Technologies LLC)
+# Official Website: https://www.duotek.ae/
+
+User-agent: *
+Allow: /
+
+# Sitemaps & LLM Context
+Sitemap: https://www.duotek.ae/sitemap.xml
+# LLM Context: https://www.duotek.ae/llms.txt
