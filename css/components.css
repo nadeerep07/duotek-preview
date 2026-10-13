@@ -821,8 +821,8 @@ body.modal-open {
   will-change: transform, opacity;
 }
 
-/* Curtain is strictly for the very first session visit */
-html.loader-seen .page-curtain {
+/* Instantly suppress curtain when navigating back from internal pages */
+html.skip-curtain .page-curtain {
   display: none !important;
 }
 
