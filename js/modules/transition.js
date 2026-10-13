@@ -51,13 +51,12 @@ export class PageTransition {
       }
     }
 
-    // Skip loader immediately when navigating back to home internally or via history back/forward
-    if (!isReload && (isInternalNav || isBackForward)) {
+    // Only show loading curtain on reload (Refresh). Skip immediately on cold visit / navigation.
+    if (!isReload) {
       this.dismissImmediate();
       return;
     }
 
-    // Only show loading on refresh or direct entrance/link paste
     this.playIntro();
   }
 
