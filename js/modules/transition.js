@@ -1,7 +1,7 @@
 /**
  * Duotek — Initial Brand Loader Controller
- * Runs a swift, elegant entrance reveal on first cold visit of a session,
- * then stays completely out of the way for 100% native, instant navigation.
+ * Runs a swift, elegant entrance reveal on page load / link paste,
+ * then cleanly dismisses to unveil the hero section.
  */
 
 export class PageTransition {
@@ -20,21 +20,15 @@ export class PageTransition {
       return;
     }
 
-    // Safety: ensure pageshow restores normal state if restored from bfcache
-    window.addEventListener('pageshow', () => {
-      this.dismissImmediate();
+    // Safety: ensure pageshow only dismisses if restored from browser bfcache
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        this.dismissImmediate();
+      }
     });
 
-    const hasSeenLoader = sessionStorage.getItem('duotek_loader_seen');
-
-    if (hasSeenLoader) {
-      // Already seen in this session -> dismiss immediately
-      this.dismissImmediate();
-    } else {
-      // First visit in session -> Mark seen and play initial brand intro
-      sessionStorage.setItem('duotek_loader_seen', 'true');
-      this.playIntro();
-    }
+    // Play initial brand intro animation
+    this.playIntro();
   }
 
   dismissImmediate() {
@@ -45,69 +39,100 @@ export class PageTransition {
   }
 
   /**
-   * First visit brand intro with progress fill
+   * Brand intro reveal with progress fill and smooth curtain lift
    */
   playIntro() {
     if (!this.curtain) return;
 
-    if (!window.gsap) {
-      setTimeout(() => this.dismissImmediate(), 400);
-      return;
-    }
+    // Fallback timer: ensure page is never stuck if an external script delays
+    const fallbackTimer = setTimeout(() => {
+      this.dismissImmediate();
+    }, 1500);
 
-    const bar = this.curtain.querySelector('.curtain-bar');
-    const content = this.curtain.querySelector('.curtain-content');
-
-    const tl = window.gsap.timeline({
-      onComplete: () => {
-        this.dismissImmediate();
+    const runAnimation = () => {
+      if (!window.gsap) {
+        setTimeout(() => this.dismissImmediate(), 400);
+        return;
       }
-    });
 
-    // 1. Sleek progress fill
-    if (bar) {
-      tl.to(bar, {
-        x: '0%',
-        duration: 0.45,
-        ease: 'power2.inOut'
+      clearTimeout(fallbackTimer);
+
+      const bar = this.curtain.querySelector('.curtain-bar');
+      const content = this.curtain.querySelector('.curtain-content');
+
+      // Ensure curtain is visible and positioned
+      window.gsap.set(this.curtain, {
+        display: 'flex',
+        visibility: 'visible',
+        yPercent: 0,
+        opacity: 1
       });
-    }
 
-    // 2. Micro-fade of brand mark
-    if (content) {
-      tl.to(content, {
-        opacity: 0,
-        scale: 0.96,
-        duration: 0.18,
-        ease: 'power2.in'
-      }, '+=0.04');
-    }
+      if (bar) {
+        window.gsap.set(bar, { x: '-100%' });
+      }
 
-    // 3. Editorial curtain lifts up cleanly
-    tl.to(this.curtain, {
-      yPercent: -100,
-      duration: 0.52,
-      ease: 'power3.inOut'
-    }, '-=0.06');
+      if (content) {
+        window.gsap.set(content, { opacity: 1, scale: 1 });
+      }
 
-    // 4. Smooth cascade of hero elements into view
-    tl.fromTo(
-      '.site-header',
-      { y: -16, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.45, ease: 'power2.out', clearProps: 'transform' },
-      '-=0.38'
-    );
+      const tl = window.gsap.timeline({
+        onComplete: () => {
+          this.dismissImmediate();
+        }
+      });
 
-    const heroElements = document.querySelectorAll(
-      '.hero-badge, #chapter-0 h1, #chapter-0 p, #chapter-0 .chapter-actions, .about-hero h1, .catalog-header h1, .contact-hero h1'
-    );
-    if (heroElements.length > 0) {
+      // 1. Sleek progress fill
+      if (bar) {
+        tl.to(bar, {
+          x: '0%',
+          duration: 0.48,
+          ease: 'power2.inOut'
+        });
+      }
+
+      // 2. Micro-fade of brand mark
+      if (content) {
+        tl.to(content, {
+          opacity: 0,
+          scale: 0.96,
+          duration: 0.18,
+          ease: 'power2.in'
+        }, '+=0.04');
+      }
+
+      // 3. Editorial curtain lifts up cleanly
+      tl.to(this.curtain, {
+        yPercent: -100,
+        duration: 0.54,
+        ease: 'power3.inOut'
+      }, '-=0.06');
+
+      // 4. Smooth cascade of site header and hero elements into view
       tl.fromTo(
-        heroElements,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.48, stagger: 0.05, ease: 'power2.out' },
-        '-=0.3'
+        '.site-header',
+        { y: -16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power2.out', clearProps: 'transform' },
+        '-=0.38'
       );
+
+      const heroElements = document.querySelectorAll(
+        '.hero-badge, #chapter-0 h1, #chapter-0 p, #chapter-0 .chapter-actions, .page-hero-eyebrow, .page-hero h1, .page-hero p, .page-breadcrumb'
+      );
+      if (heroElements.length > 0) {
+        tl.fromTo(
+          heroElements,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.48, stagger: 0.05, ease: 'power2.out' },
+          '-=0.3'
+        );
+      }
+    };
+
+    if (window.gsap) {
+      runAnimation();
+    } else {
+      window.addEventListener('load', runAnimation, { once: true });
     }
   }
 }

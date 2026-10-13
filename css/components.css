@@ -821,10 +821,7 @@ body.modal-open {
   will-change: transform, opacity;
 }
 
-/* Curtain is strictly for the very first session visit */
-html.loader-seen .page-curtain {
-  display: none !important;
-}
+/* Curtain lifts smoothly on page entrance */
 
 /* =========================================
    Pure CSS Smooth Page Content Fade-In
