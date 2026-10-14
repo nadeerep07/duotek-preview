@@ -9,7 +9,7 @@ export const companyProfile = {
   phone: '+971 50 504 9838',
   phoneTel: '+971505049838',
   email: 'sales@duotek.ae',
-  website: 'www.duotek.ae',
+  website: 'duotek.ae',
   location: 'Dubai & United Arab Emirates',
   about: 'Duotek Group is a technology solutions and IT infrastructure services provider based in the United Arab Emirates, delivering reliable, scalable, and innovative solutions for businesses, commercial spaces, offices, and residential properties. We specialize in end-to-end technology solutions from planning and installation to configuration, maintenance, and ongoing technical support.',
   mission: 'To deliver dependable IT infrastructure, security, communication, and automation solutions that empower businesses and residential clients through technology.',
