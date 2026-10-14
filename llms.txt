@@ -6,8 +6,8 @@
 Duotek Group is a technology solutions and IT infrastructure services provider based in the United Arab Emirates. We deliver turnkey infrastructure, certified cabling, surveillance, access control, unified communications, and bespoke digital software engineering for commercial offices, commercial fit-outs, and luxury residences.
 
 ## Core Pages & Services
-- [Home](https://www.duotek.ae/): Overview of Duotek Group capabilities, turnkey engineering philosophy, client partnerships, and company headquarters.
-- [Services Catalog](https://www.duotek.ae/services.html): Complete scope of 11 core IT & ELV services plus modular digital software solutions:
+- [Home](https://duotek.ae/): Overview of Duotek Group capabilities, turnkey engineering philosophy, client partnerships, and company headquarters.
+- [Services Catalog](https://duotek.ae/services.html): Complete scope of 11 core IT & ELV services plus modular digital software solutions:
   - IT AMC (Annual Maintenance Contracts) with SLA-backed on-site emergency support.
   - Fluke-certified Structured Cabling (Cat6, Cat6A, single/multimode fiber optics).
   - Server Rack Architecture, Cable Dressing & Clean-Up (Wall-mounted & floor-standing 4U-47U).
@@ -21,8 +21,8 @@ Duotek Group is a technology solutions and IT infrastructure services provider b
   - Corporate Email Solutions (Microsoft 365, Google Workspace, SPF/DKIM/DMARC deliverability).
   - Turnkey IT Infrastructure Relocation & Commercial Office Fit-Out Decommissioning/Recommissioning.
   - Bespoke Software Engineering & Digital Practice (Custom web portals, mobile apps, SaaS, APIs).
-- [About Us](https://www.duotek.ae/about.html): Company history, mission, vision, certified engineering team, client portfolio (Aegon Shipping, Regale Innovation Polyclinic, Don Padel, Prompt Interiors), and disciplined 6-stage project execution framework.
-- [Contact Us](https://www.duotek.ae/contact.html): Office address, direct phone, email, and inquiry form for site surveys and technical quotations.
+- [About Us](https://duotek.ae/about.html): Company history, mission, vision, certified engineering team, client portfolio (Aegon Shipping, Regale Innovation Polyclinic, Don Padel, Prompt Interiors), and disciplined 6-stage project execution framework.
+- [Contact Us](https://duotek.ae/contact.html): Office address, direct phone, email, and inquiry form for site surveys and technical quotations.
 
 ## Company Details
 - Legal Name: DUOTEK Information Technologies LLC
@@ -31,5 +31,5 @@ Duotek Group is a technology solutions and IT infrastructure services provider b
 - Coordinates: 25.2631° N, 55.3275° E
 - Phone: +971 50 504 9838
 - Email: sales@duotek.ae
-- Website: https://www.duotek.ae/
+- Website: https://duotek.ae/
 - Operating Hours: Monday - Saturday, 08:00 - 18:00 (GST)
