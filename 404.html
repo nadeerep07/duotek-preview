@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0eb">
+  <meta name="robots" content="noindex, follow">
+  <title>Page Not Found — 404 | Duotek Group</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .error-hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 60px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, rgba(200, 150, 62, 0.08) 0%, transparent 60%);
+    }
+    .error-card {
+      max-width: 620px;
+      padding: 48px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--color-border);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--color-warm);
+      margin-bottom: 16px;
+    }
+    .error-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-bottom: 16px;
+    }
+    .error-desc {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+    }
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      background: var(--color-dark);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn-return:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      border: 1px solid var(--color-border);
+      background: #fff;
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--color-surface);
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand-logo" aria-label="Duotek Group Homepage">
+        <img src="assets/images/duotek-logo-transparent.png" alt="Duotek Group" width="138" height="48" class="logo-img">
+      </a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/about" class="nav-link">About Us</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+971505049838" class="phone-link" aria-label="Call Duotek">
+          <span class="phone-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <span class="phone-text">+971 50 504 9838</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Hero Section -->
+  <main class="error-hero">
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">
+        The link you followed may be broken or the page may have been moved during our recent infrastructure upgrade. Let’s get you back on track.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="btn-return">Return to Homepage →</a>
+        <a href="/services" class="btn-secondary">Explore Services</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Simple Footer -->
+  <footer style="text-align: center; padding: 24px; font-family: var(--font-sans); font-size: 0.85rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border);">
+    © 2026 DUOTEK Information Technologies LLC • Dubai, United Arab Emirates
+  </footer>
+</body>
+</html>
