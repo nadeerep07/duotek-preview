@@ -42,5 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log('Duotek Group — Human by Design initialized successfully with 11 core IT & ELV services.');
+  console.log('Duotek Group website initialized with IT, ELV, and software services.');
 });

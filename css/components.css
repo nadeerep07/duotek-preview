@@ -173,12 +173,14 @@ body.modal-open {
   justify-content: center;
   align-items: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--duration-normal) var(--ease-smooth);
+  transition: opacity var(--duration-normal) var(--ease-smooth), visibility var(--duration-normal) var(--ease-smooth);
 }
 
 .contact-modal.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -810,15 +812,19 @@ body.modal-open {
    Editorial Brand Curtain & Page Transition
    ========================================= */
 .page-curtain {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 99999;
   background: var(--color-bg);
-  display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: all;
   will-change: transform, opacity;
+}
+
+.page-curtain.active {
+  display: flex;
 }
 
 /* Instantly suppress curtain when navigating back from internal pages */
@@ -899,7 +905,7 @@ main {
   100% { transform: scale(1.02); opacity: 1; }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce), (max-width: 900px) {
   .page-curtain {
     display: none !important;
   }

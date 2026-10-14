@@ -10,31 +10,46 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.duotek\.ae$ [NC]
 RewriteRule ^(.*)$ https://duotek.ae/$1 [L,R=301]
 
-# 2. Strip trailing slash for non-directories (e.g., /about/ -> /about)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
+# 2. Redirect /index.html directly to clean root (https://duotek.ae/)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html [NC]
+RewriteRule ^index\.html$ https://duotek.ae/ [R=301,L]
 
-# 3. Seamless Clean URLs (loads .html files without extension in URL)
-# e.g., /about -> about.html, /services -> services.html, /contact -> contact.html
+# 3. Strip .html extension in browser address bar (e.g. /about.html -> /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html [NC]
+RewriteRule ^(.*)\.html$ https://duotek.ae/$1 [R=301,L]
+
+# 4. Strip trailing slash for non-directories (e.g., /about/ -> /about)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ https://duotek.ae/$1 [L,R=301]
+
+# 5. Clean aliases and friendly URLs
+RewriteRule ^software/?$ software-development.html [NC,L]
+RewriteRule ^software-development/?$ software-development.html [NC,L]
+RewriteRule ^terms/?$ terms.html [NC,L]
+RewriteRule ^careers/?$ careers.html [NC,L]
+RewriteRule ^terms-(and-conditions|of-service)/?$ /terms [R=301,L]
+RewriteRule ^(jobs|careers-at-duotek)/?$ /careers [R=301,L]
+
+# 6. Legacy WordPress / old indexed URLs redirect to clean modern pages
+RewriteRule ^wp-.*$ / [R=301,L]
+RewriteRule ^pharmacy.*$ /services [R=301,L]
+RewriteRule ^services/.*$ /services [R=301,L]
+RewriteRule ^about-us/?$ /about [R=301,L]
+RewriteRule ^contact-us/?$ /contact [R=301,L]
+RewriteRule ^it-.*$ /services [R=301,L]
+RewriteRule ^cctv.*$ /services [R=301,L]
+RewriteRule ^annual-.*$ /services [R=301,L]
+RewriteRule ^biometric.*$ /services [R=301,L]
+RewriteRule ^structured-.*$ /services [R=301,L]
+RewriteRule ^network-.*$ /services [R=301,L]
+RewriteRule ^solutions/.*$ /services [R=301,L]
+RewriteRule ^products/.*$ /services [R=301,L]
+
+# 7. Seamless Clean URLs (internally serve .html file for extensionless requests)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# 4. Redirect legacy WordPress / old indexed URLs to new pages
-RewriteRule ^wp-.*$ / [R=301,L]
-RewriteRule ^pharmacy.*$ /services.html [R=301,L]
-RewriteRule ^services/.*$ /services.html [R=301,L]
-RewriteRule ^about-us/?$ /about.html [R=301,L]
-RewriteRule ^contact-us/?$ /contact.html [R=301,L]
-RewriteRule ^it-.*$ /services.html [R=301,L]
-RewriteRule ^cctv.*$ /services.html [R=301,L]
-RewriteRule ^annual-.*$ /services.html [R=301,L]
-RewriteRule ^biometric.*$ /services.html [R=301,L]
-RewriteRule ^structured-.*$ /services.html [R=301,L]
-RewriteRule ^network-.*$ /services.html [R=301,L]
-RewriteRule ^solutions/.*$ /services.html [R=301,L]
-RewriteRule ^products/.*$ /services.html [R=301,L]
-
-# 5. Custom Branded 404 Error Page
+# 8. Custom Branded 404 Error Page
 ErrorDocument 404 /404.html

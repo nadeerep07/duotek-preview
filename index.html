@@ -6,16 +6,20 @@
   <meta name="theme-color" content="#f3f0eb">
   <meta name="google-site-verification" content="cRvyJA8YIC-1PwGe5ktnxgXgvlj1OjWPJjN3kkDeWRs">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0"></script>
+  <!-- Google tag (gtag.js) — production only -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VCD0B7H0G0');
+    if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VCD0B7H0G0');
+    }
   </script>
-  <meta name="description" content="Premier enterprise IT infrastructure, custom software development, ELV cabling, and turnkey technology solutions in Dubai & the UAE. Specialized in bespoke web & mobile app engineering, IT AMC, Cat6/6A cabling, 3CX telephony, CCTV, biometric access, and cloud systems.">
-  <meta name="keywords" content="custom software development Dubai, software development company UAE, mobile app development Dubai, iOS Android app development UAE, web application development Dubai, enterprise software solutions UAE, ERP CRM integration Dubai, SaaS development Dubai, business automation UAE, Aruba Access Point Dubai, Hikvision CCTV Camera Dubai, Access Control Dubai, Hikvision Access Control, Fortinet Firewall Dubai, Cisco Switch Supplier Dubai, UniFi Switch Dubai, DrayTek Router Dubai, Professional Speakers Dubai, Bosch and JBL Speakers, IT AMC Dubai, structured cabling UAE, 3CX IP PBX Dubai, server rack cabling Dubai">
+  <meta name="description" content="Dubai IT company delivering IT AMC, structured cabling, networking, CCTV, access control, 3CX telephony, smart automation, and custom software across the UAE.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://duotek.ae/">
 
@@ -28,18 +32,18 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Duotek Group">
-  <meta property="og:title" content="Duotek Group — Enterprise IT Infrastructure & Custom Software Development | Dubai, UAE">
-  <meta property="og:description" content="Turnkey technology engineering & custom software development in Dubai & UAE. Web & mobile app development, certified Aruba, Hikvision CCTV & Access Control, Fortinet Firewalls, Cisco & UniFi Switches, DrayTek, and IT AMC.">
+  <meta property="og:title" content="IT, ELV &amp; Custom Software Company in Dubai | Duotek">
+  <meta property="og:description" content="One Dubai team for business IT support, ELV infrastructure, security, communications, automation, and custom software across the UAE.">
   <meta property="og:url" content="https://duotek.ae/">
-  <meta property="og:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
-  <meta property="og:image:alt" content="Duotek Group Contemporary IT Workspace UAE">
+  <meta property="og:image" content="https://duotek.ae/assets/images/service-software-v2.webp">
+  <meta property="og:image:alt" content="Duotek Group IT infrastructure and software engineering practice in Dubai">
   <meta property="og:locale" content="en_AE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Duotek Group — Enterprise IT Infrastructure & Custom Software Development | Dubai, UAE">
-  <meta name="twitter:description" content="Turnkey IT infrastructure & custom software development in Dubai. Web & mobile apps, Aruba, Hikvision CCTV, Fortinet, Cisco, UniFi, DrayTek, and IT AMC services.">
-  <meta name="twitter:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
+  <meta name="twitter:title" content="IT, ELV &amp; Custom Software Company in Dubai | Duotek">
+  <meta name="twitter:description" content="Business IT support, ELV infrastructure, CCTV, telephony, automation, and custom software delivered across the UAE.">
+  <meta name="twitter:image" content="https://duotek.ae/assets/images/service-software-v2.webp">
 
   <!-- Structured Data: LocalBusiness & Organization JSON-LD -->
   <script type="application/ld+json">
@@ -48,6 +52,7 @@
     "@type": ["ITService", "LocalBusiness"],
     "name": "DUOTEK Information Technologies LLC",
     "alternateName": "Duotek Group",
+    "foundingDate": "2015",
     "url": "https://duotek.ae/",
     "logo": "https://duotek.ae/assets/images/duotek-logo-transparent.png",
     "image": "https://duotek.ae/assets/images/hero-workspace.webp",
@@ -106,49 +111,32 @@
   }
   </script>
 
-  <title>Duotek Group — Enterprise IT Infrastructure & Custom Software Development | Dubai, UAE</title>
+  <title>IT, ELV &amp; Software Company in Dubai | Duotek Group</title>
 
   <!-- Favicon: Duotek Brand Emblem ('O') -->
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
-  <!-- Preconnect & Preloads for Fast Mobile Performance -->
+  <!-- Preconnect & Preloads for Fast Mobile Performance (LCP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preload" as="image" href="assets/images/hero-workspace.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/duotek-logo-transparent.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero-workspace.webp" type="image/webp" fetchpriority="high">
 
-  <!-- Typography: Manrope & DM Sans (Non-blocking display=swap) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </noscript>
+  <!-- Typography: Manrope (Headings) & DM Sans (Body) with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Design System CSS (Bundled single request, zero @import chains) -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 
-  <!-- Navigation State: Only run brand intro loader on reload/refresh; skip instantly on direct visits & audits -->
-  <script>
-    try {
-      var navEntries = (window.performance && window.performance.getEntriesByType)
-        ? window.performance.getEntriesByType('navigation')
-        : [];
-      var isReload = navEntries.length > 0
-        ? navEntries[0].type === 'reload'
-        : (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
-      if (!isReload) {
-        document.documentElement.classList.add('skip-curtain');
-      }
-    } catch (e) {}
-  </script>
 </head>
 <body>
   <!-- Page Transition & Brand Intro Curtain -->
   <div id="page-curtain" class="page-curtain" aria-hidden="true">
     <div class="curtain-content">
-      <img class="curtain-logo" src="assets/images/duotek-logo-transparent.png" alt="Duotek Group" width="128" height="44">
+      <img class="curtain-logo" src="/assets/images/duotek-logo-transparent.png" alt="Duotek Group" width="128" height="44">
       <div class="curtain-bar-wrap">
         <div class="curtain-bar"></div>
       </div>
@@ -163,14 +151,15 @@
 
   <!-- Site Header -->
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="DUOTEK Information Technologies LLC">
-      <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40">
+    <a class="logo" href="/" aria-label="DUOTEK Information Technologies LLC">
+      <img src="/assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40">
     </a>
     <nav class="nav" aria-label="Main Navigation">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/" class="active">Home</a>
+      <a href="/services">IT &amp; ELV Services</a>
+      <a href="/software">Software</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="tel:+971505049838" class="header-phone-chip" title="Call Duotek Support: +971 50 504 9838">
@@ -179,7 +168,7 @@
         </span>
         <span class="phone-chip-number">+971 50 504 9838</span>
       </a>
-      <button type="button" class="header-cta" data-open-contact aria-label="Open contact inquiry modal">
+      <button type="button" class="header-cta" data-open-contact aria-label="Let's talk — Open contact inquiry modal">
         Let's talk <span>↗</span>
       </button>
       <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
@@ -194,14 +183,15 @@
     <div class="mobile-nav-backdrop"></div>
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
-        <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
+        <img src="/assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
         <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
       </div>
       <nav class="mobile-nav-links" aria-label="Mobile Navigation">
-        <a href="index.html" class="active"><span>Home</span><span class="nav-arrow">→</span></a>
-        <a href="about.html"><span>About</span><span class="nav-arrow">→</span></a>
-        <a href="services.html"><span>Services Catalog (11)</span><span class="nav-arrow">→</span></a>
-        <a href="contact.html"><span>Contact &amp; Dubai HQ</span><span class="nav-arrow">→</span></a>
+        <a href="/" class="active"><span>Home</span><span class="nav-arrow">→</span></a>
+        <a href="/services"><span>IT &amp; ELV Services (11)</span><span class="nav-arrow">→</span></a>
+        <a href="/software"><span>Custom Software &amp; Apps</span><span class="nav-arrow">→</span></a>
+        <a href="/about"><span>About</span><span class="nav-arrow">→</span></a>
+        <a href="/contact"><span>Contact</span><span class="nav-arrow">→</span></a>
       </nav>
       <div class="mobile-nav-footer">
         <a href="tel:+971505049838" class="mobile-nav-action-btn phone">
@@ -230,9 +220,9 @@
           <div class="chapters">
             <!-- Chapter 00: Overview Hero -->
             <section class="chapter" id="chapter-0" data-chapter-index="0" aria-label="Introduction: Duotek Group UAE">
-              <div class="hero-badge"><span class="badge-dot"></span> Enterprise IT &amp; ELV Infrastructure • UAE</div>
-              <h1><em>Smarter</em><br>spaces.<br>Better days.</h1>
-              <p>Turnkey technology engineering for modern commercial offices, luxury fit-outs, and mission-critical spaces across Dubai and the UAE. Delivering high-availability networking, certified ELV cabling, and 24/7 technical assurance.</p>
+              <div class="hero-badge"><span class="badge-dot"></span> Enterprise IT, ELV &amp; Software • UAE</div>
+              <h1><em>IT, ELV &amp; software</em><br>solutions in Dubai.</h1>
+              <p>Plan, install, support, and improve your business technology with one UAE team—from IT AMC, structured cabling, networks, CCTV, access control, and 3CX telephony to custom web and mobile software.</p>
 
               <!-- Interactive Capability Jump Pills -->
               <div class="hero-capability-pills" aria-label="Quick jump to capabilities">
@@ -251,44 +241,47 @@
                 <a href="#chapter-5" data-jump="5" class="hero-pill" title="Jump to Automation">
                   <span class="pill-dot"></span> Smart Automation
                 </a>
+                <a href="#home-software-spotlight" class="hero-pill" title="Explore Software Engineering">
+                  <span class="pill-dot"></span> Software &amp; Cloud
+                </a>
               </div>
 
               <div class="chapter-actions">
-                <a class="cta-link" href="#chapter-1" data-jump="1">Explore Capabilities ↗</a>
-                <button type="button" class="secondary-link hero-consult-btn" data-open-contact>Talk to an Engineer →</button>
+                <a class="cta-link" href="/services">Explore IT, ELV &amp; software ↗</a>
+                <button type="button" class="secondary-link hero-consult-btn" data-open-contact>Request a project consultation →</button>
               </div>
 
               <!-- Enterprise Proof & Metrics Strip -->
               <div class="hero-metrics-strip" aria-label="Duotek Key Metrics">
                 <div class="hero-metric-item">
-                  <strong class="metric-num">10+</strong>
-                  <span class="metric-label">Years Field Record</span>
-                </div>
-                <div class="metric-divider" aria-hidden="true"></div>
-                <div class="hero-metric-item">
-                  <strong class="metric-num">99.9%</strong>
-                  <span class="metric-label">Network SLA Uptime</span>
+                  <strong class="metric-num">2015</strong>
+                  <span class="metric-label">Established in Dubai</span>
                 </div>
                 <div class="metric-divider" aria-hidden="true"></div>
                 <div class="hero-metric-item">
                   <strong class="metric-num">11</strong>
-                  <span class="metric-label">Core IT Disciplines</span>
+                  <span class="metric-label">Core IT &amp; ELV Services</span>
                 </div>
                 <div class="metric-divider" aria-hidden="true"></div>
                 <div class="hero-metric-item">
-                  <strong class="metric-num">24/7</strong>
-                  <span class="metric-label">Rapid AMC Response</span>
+                  <strong class="metric-num">4</strong>
+                  <span class="metric-label">Digital Capabilities</span>
+                </div>
+                <div class="metric-divider" aria-hidden="true"></div>
+                <div class="hero-metric-item">
+                  <strong class="metric-num">6</strong>
+                  <span class="metric-label">Delivery Stages</span>
                 </div>
               </div>
 
-              <img class="mobile-service-photo hero-primary-photo" src="assets/images/hero-workspace.webp" alt="Duotek contemporary workspace in the UAE" fetchpriority="high" loading="eager" width="1500" height="844">
+              <img class="mobile-service-photo hero-primary-photo" src="/assets/images/hero-workspace.webp" alt="Duotek enterprise IT infrastructure, server room and software engineering office in Dubai" fetchpriority="high" loading="eager" width="896" height="1200">
             </section>
 
             <!-- Chapter 01: IT AMC -->
             <section class="chapter" id="chapter-1" data-chapter-index="1" aria-label="IT Annual Maintenance Contract">
               <div class="eyebrow">01 / 05 — IT Annual Maintenance Contract</div>
-              <h2>Ready for every<br><em>day.</em></h2>
-              <p>Comprehensive IT Annual Maintenance Contract (AMC) services to help businesses maintain reliable operations and minimize technical downtime.</p>
+              <h2>IT AMC support<br><em>for Dubai businesses.</em></h2>
+              <p>Keep users, devices, networks, and essential office systems working with preventive maintenance, practical troubleshooting, and support matched to your environment.</p>
               <ul class="chapter-highlights">
                 <li>Desktop, laptop, hardware &amp; software troubleshooting</li>
                 <li>Network connectivity support &amp; user access management</li>
@@ -296,33 +289,33 @@
               </ul>
               <div class="chapter-actions">
                 <button type="button" class="cta-link" data-open-contact data-service="IT AMC – Annual Maintenance Contract">Request AMC proposal ↗</button>
-                <a class="secondary-link" href="services.html#service-card-A">See technical scope →</a>
+                <a class="secondary-link" href="/services#service-card-A">See technical scope →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-amc.webp" alt="IT AMC maintenance visual" loading="lazy" decoding="async" width="1672" height="940">
+              <img class="mobile-service-photo" src="/assets/images/service-amc-v2.webp" alt="Duotek engineer providing IT AMC support in a Dubai office" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 02: Structured Cabling & Server Racks -->
             <section class="chapter" id="chapter-2" data-chapter-index="2" aria-label="Structured Cabling and Server Racks">
               <div class="eyebrow">02 / 05 — Structured Cabling &amp; Server Racks</div>
-              <h2>Clean lines.<br><em>Solid core.</em></h2>
-              <p>Fluke-tested Cat6/Cat6A structured cabling and organized server rack installations for modern offices, data closets, and commercial facilities.</p>
+              <h2>Structured cabling<br><em>built to stay organized.</em></h2>
+              <p>Cat6/Cat6A structured cabling and serviceable network racks for offices, fit-outs, data closets, and commercial facilities across the UAE.</p>
               <ul class="chapter-highlights">
                 <li>Cat6 &amp; Cat6A voice and data cabling infrastructure</li>
                 <li>Wall-mounted and floor-standing network rack installation</li>
-                <li>Patch cord dressing, port-by-port labeling &amp; Fluke verification</li>
+                <li>Patch cord dressing, port-by-port labeling &amp; project-specific cable testing</li>
               </ul>
               <div class="chapter-actions">
                 <button type="button" class="cta-link" data-open-contact data-service="Structured Cabling Solutions">Inquire cabling &amp; racks ↗</button>
-                <a class="secondary-link" href="services.html#service-card-B">See cabling details →</a>
+                <a class="secondary-link" href="/services#service-card-B">See cabling details →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack" loading="lazy" decoding="async" width="1500" height="844">
+              <img class="mobile-service-photo" src="/assets/images/service-cabling.webp" alt="Engineer terminating structured cabling in an organized network rack" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 03: IP Telephony & 3CX PBX -->
             <section class="chapter" id="chapter-3" data-chapter-index="3" aria-label="IP Telephony and 3CX PBX">
               <div class="eyebrow">03 / 05 — IP Telephony &amp; 3CX PBX Solutions</div>
-              <h2>Connected<br><em>conversations.</em></h2>
-              <p>Modern business phone systems and flexible 3CX IP PBX platforms. Crystal-clear voice calling, remote softphones, multi-tier IVR, and SIP trunks.</p>
+              <h2>3CX telephony<br><em>for connected teams.</em></h2>
+              <p>Modern IP phone systems for reception, office teams, and remote staff, with extensions, softphones, call routing, IVR, and SIP trunk configuration.</p>
               <ul class="chapter-highlights">
                 <li>3CX IP PBX installation, mobile softphones &amp; remote teams</li>
                 <li>IP desk phones, extension routing, voicemail &amp; call queues</li>
@@ -330,16 +323,16 @@
               </ul>
               <div class="chapter-actions">
                 <button type="button" class="cta-link" data-open-contact data-service="3CX IP PBX Solutions">Deploy 3CX telephony ↗</button>
-                <a class="secondary-link" href="services.html#service-card-D">View telephony scope →</a>
+                <a class="secondary-link" href="/services#service-card-D">View telephony scope →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX business phone system" loading="lazy" decoding="async" width="1500" height="844">
+              <img class="mobile-service-photo" src="/assets/images/service-telephony.webp" alt="Business IP phones and PBX commissioning in a Dubai office" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 04: CCTV & Access Control -->
             <section class="chapter" id="chapter-4" data-chapter-index="4" aria-label="CCTV Surveillance and Access Control">
               <div class="eyebrow">04 / 05 — CCTV Surveillance &amp; Access Control</div>
-              <h2>Confidence<br><em>built in.</em></h2>
-              <p>Commercial-grade IP surveillance and smart biometric access control to protect premises, restricted zones, server rooms, and commercial facilities.</p>
+              <h2>CCTV &amp; access control<br><em>planned for your site.</em></h2>
+              <p>IP surveillance and controlled entry systems designed around entrances, restricted areas, server rooms, operational workflows, and remote visibility.</p>
               <ul class="chapter-highlights">
                 <li>High-definition IP cameras, NVR storage &amp; remote mobile viewing</li>
                 <li>Biometric fingerprint &amp; facial recognition access terminals</li>
@@ -347,16 +340,16 @@
               </ul>
               <div class="chapter-actions">
                 <button type="button" class="cta-link" data-open-contact data-service="CCTV Surveillance Systems">Plan security setup ↗</button>
-                <a class="secondary-link" href="services.html#service-card-F">See security specs →</a>
+                <a class="secondary-link" href="/services#service-card-F">See security specs →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-security.webp" alt="CCTV security surveillance and access control" loading="lazy" decoding="async" width="1500" height="844">
+              <img class="mobile-service-photo" src="/assets/images/service-security-v2.webp" alt="CCTV surveillance and biometric access control installation" loading="lazy" decoding="async" width="1500" height="844">
             </section>
 
             <!-- Chapter 05: Home Automation & Smart Living -->
             <section class="chapter" id="chapter-5" data-chapter-index="5" aria-label="Home Automation and Smart Solutions">
               <div class="eyebrow">05 / 05 — Smart Automation &amp; Controls</div>
-              <h2>Spaces that<br><em>respond.</em></h2>
-              <p>Intelligent automation for residences, executive offices, and luxury environments. Intuitive lighting scenes, motorized blinds, and smart living.</p>
+              <h2>Smart automation<br><em>made practical.</em></h2>
+              <p>Integrated lighting, climate, motorized blinds, security, and mobile controls for residences, executive offices, and connected commercial environments.</p>
               <ul class="chapter-highlights">
                 <li>Smart lighting control, scene-based switching &amp; dimming</li>
                 <li>Motorized curtain/blind automation &amp; smart climate control</li>
@@ -364,23 +357,23 @@
               </ul>
               <div class="chapter-actions">
                 <button type="button" class="cta-link" data-open-contact data-service="Home Automation & Smart Solutions">Automate your property ↗</button>
-                <a class="secondary-link" href="services.html#service-card-H">See automation features →</a>
+                <a class="secondary-link" href="/services#service-card-H">See automation features →</a>
               </div>
-              <img class="mobile-service-photo" src="assets/images/service-automation.webp" alt="Smart home automation and ambient lighting" loading="lazy" decoding="async" width="1500" height="844">
+              <img class="mobile-service-photo" src="/assets/images/service-automation-v2.webp" alt="Smart building lighting, climate, and blind automation controls" loading="lazy" decoding="async" width="1500" height="844">
             </section>
           </div>
 
           <!-- Right Column: Sticky Photography -->
           <div class="photo-wrap" aria-hidden="true">
-            <img class="photo active" src="assets/images/hero-workspace.webp" alt="Contemporary technology workspace in UAE" width="1500" height="844" fetchpriority="high">
-            <img class="photo" src="assets/images/service-amc.webp" alt="IT AMC Annual Maintenance Contract visual" width="1672" height="940" loading="lazy" decoding="async">
-            <img class="photo" src="assets/images/service-cloud.webp" alt="Structured cabling and network rack visual" width="1500" height="844" loading="lazy" decoding="async">
-            <img class="photo" src="assets/images/service-web.webp" alt="IP telephony and 3CX phone system visual" width="1500" height="844" loading="lazy" decoding="async">
-            <img class="photo" src="assets/images/service-security.webp" alt="CCTV surveillance and access control visual" width="1500" height="844" loading="lazy" decoding="async">
-            <img class="photo" src="assets/images/service-automation.webp" alt="Smart automation and intelligent living visual" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo active" src="/assets/images/hero-workspace.webp" alt="Duotek enterprise IT infrastructure, server room and software engineering office in Dubai" width="896" height="1200" fetchpriority="high">
+            <img class="photo" src="/assets/images/service-amc-v2.webp" alt="IT AMC engineer supporting a modern office" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="/assets/images/service-cabling.webp" alt="Structured cabling and organized network rack installation" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="/assets/images/service-telephony.webp" alt="IP telephony and business phone deployment" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="/assets/images/service-security-v2.webp" alt="CCTV surveillance and biometric access control" width="1500" height="844" loading="lazy" decoding="async">
+            <img class="photo" src="/assets/images/service-automation-v2.webp" alt="Smart building and home automation controls" width="1500" height="844" loading="lazy" decoding="async">
 
             <!-- Floating Caption Pill -->
-            <span class="photo-caption">Duotek Group / UAE Technology Infrastructure</span>
+            <span class="photo-caption">Duotek Group / IT, ELV &amp; Software Engineering</span>
           </div>
         </div>
       </div>
@@ -392,13 +385,13 @@
     <section class="home-clients-section" aria-label="Trusted by UAE Organizations">
       <div class="home-clients-inner">
         <div class="home-clients-header">
-          <span class="clients-badge-pill">Proven Field Track Record</span>
-          <h2 class="home-clients-title">Trusted for mission-critical IT &amp; ELV infrastructure across Dubai and the UAE</h2>
+          <span class="clients-badge-pill">Selected Client Relationships</span>
+          <h2 class="home-clients-title">Technology support for UAE businesses, facilities, and fit-out projects</h2>
         </div>
         <div class="home-clients-grid">
           <div class="home-client-card" title="Aegon Shipping LLC — Maritime & Freight Logistics">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy" decoding="async" width="176" height="80">
+              <img src="/assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy" decoding="async" width="176" height="80">
             </div>
             <div class="client-meta">
               <strong>Aegon Shipping LLC</strong>
@@ -408,7 +401,7 @@
 
           <div class="home-client-card" title="Regale Innovation Polyclinic — Healthcare & Medical Center">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy" decoding="async" width="200" height="51">
+              <img src="/assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy" decoding="async" width="200" height="51">
             </div>
             <div class="client-meta">
               <strong>Regale Innovation Polyclinic</strong>
@@ -418,7 +411,7 @@
 
           <div class="home-client-card" title="Don Padel Sports Academy — Sports & Leisure Facilities">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy" decoding="async" width="180" height="97">
+              <img src="/assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy" decoding="async" width="180" height="97">
             </div>
             <div class="client-meta">
               <strong>Don Padel Sports Academy</strong>
@@ -428,7 +421,7 @@
 
           <div class="home-client-card" title="Prompt Interiors — Commercial Contracting & Fit-Outs">
             <div class="client-logo-box">
-              <img src="assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy" decoding="async" width="204" height="50">
+              <img src="/assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy" decoding="async" width="204" height="50">
             </div>
             <div class="client-meta">
               <strong>Prompt Interiors</strong>
@@ -445,38 +438,34 @@
     <section class="home-discover-section" aria-label="Explore Duotek Group Capabilities">
       <div class="home-discover-header">
         <div class="section-eyebrow">Explore Duotek Group</div>
-        <h2>Enterprise precision. Dependable support.</h2>
+        <h2>Choose the right technology path for your project.</h2>
       </div>
 
       <div class="discover-grid">
-        <a href="about.html" class="discover-card">
+        <a href="/about" class="discover-card">
           <span class="discover-card-tag">Company Profile</span>
           <h3>About Duotek Group</h3>
           <p>Learn about our mission, vision, core values, why UAE businesses choose us, and our disciplined 6-step project delivery methodology.</p>
           <span class="discover-card-link">Read company profile →</span>
         </a>
 
-        <a href="services.html" class="discover-card">
+        <a href="/services" class="discover-card">
           <span class="discover-card-tag">Complete Scope</span>
-          <h3>11 Core IT &amp; ELV Services</h3>
-          <p>Explore detailed technical specifications for IT AMC, cabling, 3CX, server setups, CCTV surveillance, access control, and smart automation.</p>
+          <h3>IT, ELV &amp; Software Services</h3>
+          <p>Compare IT AMC, cabling, networking, telephony, servers, CCTV, access control, automation, and custom software capabilities.</p>
           <span class="discover-card-link">View full catalog →</span>
         </a>
 
-        <a href="contact.html" class="discover-card">
-          <span class="discover-card-tag">Dubai Headquarters</span>
+        <a href="/contact" class="discover-card">
+          <span class="discover-card-tag">Dubai Office</span>
           <h3>Get in Touch</h3>
-          <p>Connect with certified engineers for office fit-outs, site surveys, and turnkey consultations across Dubai and the UAE.</p>
+          <p>Connect with our technical team for office fit-outs, site surveys, and turnkey consultations across Dubai and the UAE.</p>
           <span class="discover-card-link">Contact engineering team →</span>
         </a>
       </div>
     </section>
 
-    <!-- =========================================================
-         [MODULAR / OPTIONAL SECTION]: SOFTWARE & DIGITAL DIVISION SPOTLIGHT
-         Status: Active Digital Engineering Practice (Easy to remove if needed)
-         Does not affect the 11 active core infrastructure services.
-         ========================================================= -->
+    <!-- SOFTWARE & DIGITAL ENGINEERING PRACTICE -->
     <section class="home-upcoming-spotlight" id="home-software-spotlight" aria-label="Digital Practice: Software Engineering">
       <div class="home-upcoming-inner">
         <div class="home-upcoming-left">
@@ -484,8 +473,8 @@
             <span class="status-pulse-dot" aria-hidden="true"></span>
             <span>Bespoke Digital Engineering</span>
           </div>
-          <h3>Custom Software &amp; <em>Digital Development</em></h3>
-          <p>Empower your business with tailored software engineered for speed and scale. From custom client portals and high-conversion web platforms to iOS/Android mobile applications and secure cloud APIs, Duotek brings modern software engineering to UAE enterprises.</p>
+          <h3>Custom Software Development <em>for UAE Businesses</em></h3>
+          <p>Software development is a core Duotek capability. We turn manual processes and disconnected data into client portals, business web applications, iOS and Android apps, cloud APIs, integrations, and workflow automation designed around your users and operating requirements.</p>
         </div>
         <div class="home-upcoming-right">
           <div class="upcoming-tags-row">
@@ -495,8 +484,8 @@
             <span class="upcoming-mini-tag">Workflow Automation</span>
           </div>
           <div class="home-upcoming-actions">
-            <a href="services.html#software-practice" class="upcoming-preview-link">
-              Explore Software Scope →
+            <a href="/software" class="upcoming-preview-link">
+              Explore Software Development →
             </a>
             <button type="button" class="upcoming-quick-btn" data-open-contact data-service="Custom Software & Web Development">
               Request Software Proposal ↗
@@ -509,28 +498,16 @@
     <!-- Direct CTA Banner -->
     <section class="end-panel" aria-label="Contact Duotek Group">
       <small>Connect with our engineering team</small>
-      <h2>Technology should feel effortless.</h2>
+      <h2>Planning an IT, ELV, or software project?</h2>
       <p>
-        Contact Duotek Group to discuss your project requirements and discover the right technology solution for your business or property in the UAE.
+        Share your requirements, current challenges, site location, and target timeline. Our team will help define a practical scope for your business or property in the UAE.
       </p>
 
-      <div class="direct-contact-pills">
-        <a href="tel:+971505049838" class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Phone: +971 50 504 9838
-        </a>
-        <a href="mailto:sales@duotek.ae" class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email: sales@duotek.ae
-        </a>
-        <span class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Dubai &amp; United Arab Emirates
-        </span>
-      </div>
-
       <div class="end-actions">
-        <a href="contact.html" class="primary-cta">
+        <a href="/contact" class="primary-cta">
           Discuss your project <span>↗</span>
         </a>
-        <a href="services.html" class="secondary-link" style="padding: 14px 24px; border: 1px solid var(--color-border); border-radius: 100px;">
+        <a href="/services" class="secondary-link" style="padding: 14px 24px; border: 1px solid var(--color-border); border-radius: 100px;">
           Explore full capabilities →
         </a>
       </div>
@@ -543,7 +520,7 @@
     <div class="footer-top-banner">
       <div class="footer-statement">
         <h3>Building dependable technology for the UAE's <em>forward-thinking spaces.</em></h3>
-        <p>Enterprise IT infrastructure, structured cabling, smart security, and building automation delivered with uncompromising precision.</p>
+        <p>IT infrastructure, structured cabling, security, automation, and software delivered from assessment through handover and support.</p>
       </div>
       <div class="footer-top-actions">
         <a href="https://wa.me/971505049838?text=Hello%20Duotek%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services." target="_blank" rel="noopener noreferrer" class="footer-top-whatsapp" title="WhatsApp Support">
@@ -558,13 +535,13 @@
       <!-- Col 1: Brand Identity & Social Presence -->
       <div class="footer-col footer-col-brand">
         <div class="footer-emblem-wrap">
-          <a href="index.html" class="footer-logo-link" aria-label="DUOTEK Home">
-            <img src="assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38">
+          <a href="/" class="footer-logo-link" aria-label="DUOTEK Home">
+            <img src="/assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38">
           </a>
         </div>
         <span class="footer-tagline-badge">Your IT Partner in the UAE</span>
         <p class="footer-desc">
-          Turnkey technology solutions provider based in Dubai, delivering reliable IT AMC, certified structured cabling, telephony, CCTV, and smart automation.
+          Dubai technology company delivering IT support, structured cabling, networking, telephony, CCTV, access control, automation, and custom software.
         </p>
         <div class="footer-socials" aria-label="Social media channels">
           <a href="https://www.facebook.com/share/1C9YsbggDi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Duotek Facebook">
@@ -579,9 +556,9 @@
         </div>
       </div>
 
-      <!-- Col 2: Dubai Headquarters -->
+      <!-- Col 2: Dubai Office -->
       <div class="footer-col">
-        <h4>Dubai Headquarters</h4>
+        <h4>Dubai Office</h4>
         <ul class="footer-address-list">
           <li>
             <div class="addr-icon">
@@ -599,7 +576,10 @@
             <div class="addr-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.25l-8 5-8-5V6l8 5 8-5v2.25z"/></svg>
             </div>
-            <a href="mailto:sales@duotek.ae">sales@duotek.ae</a>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <a href="mailto:sales@duotek.ae" style="display: inline-block; padding: 4px 0;">sales@duotek.ae</a>
+              <a href="mailto:info@duotek.ae" style="font-size: 13px; color: var(--color-text-muted); display: inline-block; padding: 4px 0;">info@duotek.ae</a>
+            </div>
           </li>
           <li>
             <div class="addr-icon">
@@ -620,13 +600,14 @@
       <div class="footer-col">
         <h4>Core Solutions</h4>
         <ul class="footer-links-list">
-          <li><a href="services.html#service-card-A">IT AMC Maintenance</a></li>
-          <li><a href="services.html#service-card-B">Structured Cabling Cat6/6A</a></li>
-          <li><a href="services.html#service-card-C">Network Racks &amp; Servers</a></li>
-          <li><a href="services.html#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
-          <li><a href="services.html#service-card-F">CCTV Surveillance Systems</a></li>
-          <li><a href="services.html#service-card-G">Biometric Access Control</a></li>
-          <li><a href="services.html#service-card-H">Smart Home Automation</a></li>
+          <li><a href="/software">Custom Software Development</a></li>
+          <li><a href="/services#service-card-A">IT AMC Maintenance</a></li>
+          <li><a href="/services#service-card-B">Structured Cabling Cat6/6A</a></li>
+          <li><a href="/services#service-card-C">Network Racks &amp; Servers</a></li>
+          <li><a href="/services#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
+          <li><a href="/services#service-card-F">CCTV Surveillance Systems</a></li>
+          <li><a href="/services#service-card-G">Biometric Access Control</a></li>
+          <li><a href="/services#service-card-H">Smart Home Automation</a></li>
         </ul>
       </div>
 
@@ -634,12 +615,13 @@
       <div class="footer-col">
         <h4>Explore &amp; Policies</h4>
         <ul class="footer-links-list">
-          <li><a href="about.html">About Duotek Group</a></li>
-          <li><a href="about.html#industries">Industries We Serve</a></li>
-          <li><a href="about.html#approach">6-Step Methodology</a></li>
-          <li><a href="contact.html">Request Project Pricing</a></li>
+          <li><a href="/about">About Duotek Group</a></li>
+          <li><a href="/about#industries">Industries We Serve</a></li>
+          <li><a href="/about#approach">6-Step Methodology</a></li>
+          <li><a href="/careers">Careers at Duotek</a></li>
+          <li><a href="/contact">Request Project Pricing</a></li>
           <li><a href="#" onclick="alert('Duotek Information Technologies LLC Privacy Policy: We value and protect customer data privacy under UAE regulatory standards.'); return false;">Privacy Statement</a></li>
-          <li><a href="#" onclick="alert('Duotek Information Technologies LLC Terms of Service: Professional service delivery and technical agreements.'); return false;">Terms of Service</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
@@ -648,11 +630,17 @@
     <div class="footer-bottom-row">
       <p>© 2026 DUOTEK Information Technologies LLC • Commercial License • Dubai, United Arab Emirates.</p>
       <div class="footer-legal-links">
-        <a href="about.html">About</a>
+        <a href="/about">About</a>
         <span>•</span>
-        <a href="services.html">Services</a>
+        <a href="/services">IT &amp; ELV Services</a>
         <span>•</span>
-        <a href="contact.html">Contact</a>
+        <a href="/software">Software</a>
+        <span>•</span>
+        <a href="/careers">Careers</a>
+        <span>•</span>
+        <a href="/contact">Contact</a>
+        <span>•</span>
+        <a href="/terms">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
@@ -680,7 +668,7 @@
       <button type="button" class="contact-close-btn" aria-label="Close dialog">×</button>
       <div class="modal-eyebrow">Duotek Group • UAE</div>
       <h3 id="modal-title">Let's talk technology.</h3>
-      <p>Tell us about your spaces, systems, or project scope. Our technical team responds within one business day.</p>
+      <p>Tell us about your site, systems, users, or software requirement. Our team will review the scope and follow up with the appropriate next step.</p>
       
       <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
         <input type="hidden" name="access_key" value="c4aa15c7-6c6f-4710-814a-abb81bd245cd">
@@ -718,7 +706,7 @@
             <option value="Business Email Solutions & Configuration">Business Email Solutions (Microsoft 365/Google)</option>
             <option value="IT Networking Solutions">IT Networking Solutions (Routers/Firewalls/Wi-Fi)</option>
             <!-- Removable: Digital Solutions Practice -->
-            <option value="Custom Software & Web Development">Custom Software &amp; Web Development (Digital Division)</option>
+            <option value="Custom Software & Web Development">Custom Software, Web &amp; Mobile Development</option>
           </select>
         </div>
 
@@ -740,6 +728,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 
   <!-- Application Bootstrap -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

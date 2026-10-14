@@ -1,45 +1,61 @@
 # DUOTEK Information Technologies LLC (Duotek Group)
 
-> Premier enterprise IT infrastructure, ELV cabling, and turnkey technology solutions provider in Dubai and the United Arab Emirates.
+> Dubai technology company delivering IT support, ELV infrastructure, business communications, security, automation, and custom software across the UAE.
 
 ## About
-Duotek Group is a technology solutions and IT infrastructure services provider based in the United Arab Emirates. We deliver turnkey infrastructure, certified cabling, surveillance, access control, unified communications, and bespoke digital software engineering for commercial offices, commercial fit-outs, and luxury residences.
 
-## Core Pages & Services
-- [Home](https://duotek.ae/): Overview of Duotek Group capabilities, turnkey engineering philosophy, client partnerships, and company headquarters.
-- [Services Catalog](https://duotek.ae/services.html): Complete scope of enterprise IT, ELV infrastructure, and custom software development:
-  - Custom Software Development Dubai (Bespoke business platforms, client portals, SaaS products, internal automation tools).
-  - Mobile App Development Dubai & UAE (Native & cross-platform iOS & Android mobile applications).
-  - Enterprise Web Applications & Client Portals (High-conversion web platforms, responsive dashboards, secure user auth).
-  - Cloud Architecture, APIs & Microservices (REST/GraphQL APIs, microservices, AWS/Cloudflare cloud deployments).
-  - Systems & IoT Integration (ERP and CRM integration, automated data pipelines, bridging IoT/ELV hardware with software).
-  - IT AMC (Annual Maintenance Contracts) with SLA-backed on-site emergency support.
-  - Fluke-certified Structured Cabling (Cat6, Cat6A, single/multimode fiber optics).
-  - Server Rack Architecture, Cable Dressing & Clean-Up (Wall-mounted & floor-standing 4U-47U).
-  - IP Telephony & 3CX IP PBX Unified Communications with UAE telco SIP trunks.
-  - Hikvision CCTV Surveillance Systems (SIRA-compliant, IP dome, bullet, PTZ, ColorVu).
-  - Access Control & Biometric Time Attendance (Hikvision MinMoe facial recognition, RFID, magnetic locks).
-  - Smart Home & Commercial Building Automation (Lighting, climate zoning, automated blinds).
-  - Professional Commercial Sound & Audio Systems (Bosch & JBL commercial speakers).
-  - Enterprise Hardware & Networking: Aruba Wi-Fi 6 Access Points, Cisco switches, Ubiquiti UniFi switches, Fortinet FortiGate firewalls, and DrayTek multi-WAN routers.
-  - Enterprise Servers & Storage Arrays (Dell PowerEdge, HPE ProLiant, Synology NAS/SAN).
-  - Corporate Email Solutions (Microsoft 365, Google Workspace, SPF/DKIM/DMARC deliverability).
-  - Turnkey IT Infrastructure Relocation & Commercial Office Fit-Out Decommissioning/Recommissioning.
+Duotek Group was established in Dubai in 2015. The company helps businesses and property owners plan, install, support, and improve workplace technology and connected systems. Its core practice covers IT and ELV infrastructure, supported by a dedicated custom software and digital engineering capability.
 
-## Software Engineering & Digital Practice
-- Core Technologies: Modern web & mobile frameworks (React, Next.js, Node.js, Python, Flutter, PostgreSQL, Redis, Docker).
-- Target Markets: Dubai, Abu Dhabi, Sharjah, and across the UAE & GCC.
-- Delivery Model: Agile sprints, rapid prototyping, turnkey cloud deployment, and long-term SLA maintenance.
+## Primary Pages
 
-- [About Us](https://duotek.ae/about.html): Company history, mission, vision, certified engineering team, client portfolio (Aegon Shipping, Regale Innovation Polyclinic, Don Padel, Prompt Interiors), and disciplined 6-stage project execution framework.
-- [Contact Us](https://duotek.ae/contact.html): Office address, direct phone, email, and inquiry form for software project proposals, site surveys, and technical quotations.
+- [Home](https://duotek.ae/): Overview of Duotek's IT, ELV, automation, security, communications, and software capabilities.
+- [IT & ELV Services](https://duotek.ae/services): Detailed service scopes and project enquiry options across 11 IT & ELV infrastructure areas.
+- [Software](https://duotek.ae/software): Bespoke web applications, iOS/Android mobile apps, client portals, APIs, and business automation in Dubai.
+- [About](https://duotek.ae/about): Company background, delivery approach, industries served, and selected client relationships.
+- [Careers](https://duotek.ae/careers): Technology careers, open positions (IT Support, Network Engineering, CCTV, Sales), and CV submissions to info@duotek.ae.
+- [Contact](https://duotek.ae/contact): Dubai office details and project enquiry form.
+- [Terms & Conditions](https://duotek.ae/terms): Official legal and commercial terms of engagement.
+
+## IT and ELV Services
+
+- IT AMC and ongoing user support.
+- Cat6/Cat6A structured cabling and fiber infrastructure.
+- Network rack installation, cleanup, labeling, and power organization.
+- Business networking, managed switches, Wi-Fi, firewalls, and VPNs.
+- Physical and virtual server installation and configuration.
+- IP telephony, business phone systems, and 3CX IP PBX.
+- CCTV surveillance and remote viewing.
+- Biometric, card, and facial-recognition access control.
+- Smart home and commercial automation.
+- Business email configuration and migration planning.
+
+## Custom Software Services
+
+- Custom web applications and client portals.
+- Business dashboards and workflow tools.
+- iOS and Android mobile applications.
+- Cloud backends and secure APIs.
+- ERP and CRM integrations.
+- Workflow automation and compatible IoT or ELV system integration.
+
+Software engagements begin with requirements discovery and are scoped around the users, workflows, data, integrations, security needs, and deployment plan of each project.
+
+## Industries and Project Types
+
+Duotek works with requirements across corporate offices, commercial fit-outs, logistics, healthcare facilities, retail, hospitality, education, sports facilities, warehouses, SMEs, and residential properties. Services are subject to project assessment, site conditions, and an agreed scope.
 
 ## Company Details
-- Legal Name: DUOTEK Information Technologies LLC
-- Trade Brand: Duotek Group
-- Headquarters: Business Village, Block B, Suite 903, Deira, Dubai, United Arab Emirates
-- Coordinates: 25.2631° N, 55.3275° E
+
+- Legal name: DUOTEK Information Technologies LLC
+- Trade name: Duotek Group
+- Established: 2015
+- Office: Business Village, Block B, Suite 903, Deira, Dubai, United Arab Emirates
 - Phone: +971 50 504 9838
-- Email: sales@duotek.ae
+- Sales email: sales@duotek.ae
+- Careers & General email: info@duotek.ae
 - Website: https://duotek.ae/
-- Operating Hours: Monday - Saturday, 08:00 - 18:00 (GST)
+- Working hours: Monday–Saturday, 08:00–18:00 GST
+
+## Accuracy Note
+
+Vendor certification, authorized-partner status, regulatory approvals, warranties, response times, and service-level commitments apply only when explicitly documented in a current proposal or contract.
