@@ -21,12 +21,20 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# 3. Redirect legacy WordPress / old indexed URLs
+# 4. Redirect legacy WordPress / old indexed URLs to new pages
 RewriteRule ^wp-.*$ / [R=301,L]
 RewriteRule ^pharmacy.*$ /services.html [R=301,L]
 RewriteRule ^services/.*$ /services.html [R=301,L]
 RewriteRule ^about-us/?$ /about.html [R=301,L]
 RewriteRule ^contact-us/?$ /contact.html [R=301,L]
+RewriteRule ^it-.*$ /services.html [R=301,L]
+RewriteRule ^cctv.*$ /services.html [R=301,L]
+RewriteRule ^annual-.*$ /services.html [R=301,L]
+RewriteRule ^biometric.*$ /services.html [R=301,L]
+RewriteRule ^structured-.*$ /services.html [R=301,L]
+RewriteRule ^network-.*$ /services.html [R=301,L]
+RewriteRule ^solutions/.*$ /services.html [R=301,L]
+RewriteRule ^products/.*$ /services.html [R=301,L]
 
-# 4. Custom Branded 404 Error Page
+# 5. Custom Branded 404 Error Page
 ErrorDocument 404 /404.html
