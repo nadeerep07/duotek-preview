@@ -48,16 +48,15 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# 8. Cache-Control: prevent CDN and browser from serving stale builds
+# 8. Cache-Control: prevent CDN and browser from serving stale builds or caching redirects
 <IfModule mod_headers.c>
-  # HTML pages: always revalidate so fresh deploys appear immediately
-  <FilesMatch "\.(html|htm)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </FilesMatch>
-  # CSS and JS: revalidate every hour or on refresh
-  <FilesMatch "\.(css|js)$">
+  # Apply to all responses by default (including 301/302 redirects) so CDNs do not cache redirect loops
+  Header always set Cache-Control "no-cache, no-store, must-revalidate"
+  Header always set Pragma "no-cache"
+  Header always set Expires "0"
+
+  # Static assets (CSS, JS, WebP, Images): allow 1 hour cache with revalidation
+  <FilesMatch "\.(css|js|webp|png|jpg|jpeg|svg|ico|woff2?)$">
     Header set Cache-Control "public, max-age=3600, must-revalidate"
   </FilesMatch>
 </IfModule>
