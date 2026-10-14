@@ -1,0 +1,34 @@
+# =========================================================
+# DUOTEK GROUP — Apache Server Configuration (Hostinger)
+# =========================================================
+
+RewriteEngine On
+RewriteBase /
+
+# 1. Force HTTPS and canonical non-www (https://duotek.ae/)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.duotek\.ae$ [NC]
+RewriteRule ^(.*)$ https://duotek.ae/$1 [L,R=301]
+
+# 2. Seamless Clean URLs (loads .html files without extension in URL)
+# e.g., /about -> about.html, /services -> services.html, /contact -> contact.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Also handle trailing slash clean URLs (e.g., /about/ -> about.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*)/$ $1.html [NC,L]
+
+# 3. Redirect legacy WordPress / old indexed URLs
+RewriteRule ^wp-.*$ / [R=301,L]
+RewriteRule ^pharmacy.*$ /services.html [R=301,L]
+RewriteRule ^services/.*$ /services.html [R=301,L]
+RewriteRule ^about-us/?$ /about.html [R=301,L]
+RewriteRule ^contact-us/?$ /contact.html [R=301,L]
+
+# 4. Custom Branded 404 Error Page
+ErrorDocument 404 /404.html
