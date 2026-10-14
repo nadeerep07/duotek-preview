@@ -7,7 +7,12 @@ Duotek Group is a technology solutions and IT infrastructure services provider b
 
 ## Core Pages & Services
 - [Home](https://duotek.ae/): Overview of Duotek Group capabilities, turnkey engineering philosophy, client partnerships, and company headquarters.
-- [Services Catalog](https://duotek.ae/services.html): Complete scope of 11 core IT & ELV services plus modular digital software solutions:
+- [Services Catalog](https://duotek.ae/services.html): Complete scope of enterprise IT, ELV infrastructure, and custom software development:
+  - Custom Software Development Dubai (Bespoke business platforms, client portals, SaaS products, internal automation tools).
+  - Mobile App Development Dubai & UAE (Native & cross-platform iOS & Android mobile applications).
+  - Enterprise Web Applications & Client Portals (High-conversion web platforms, responsive dashboards, secure user auth).
+  - Cloud Architecture, APIs & Microservices (REST/GraphQL APIs, microservices, AWS/Cloudflare cloud deployments).
+  - Systems & IoT Integration (ERP and CRM integration, automated data pipelines, bridging IoT/ELV hardware with software).
   - IT AMC (Annual Maintenance Contracts) with SLA-backed on-site emergency support.
   - Fluke-certified Structured Cabling (Cat6, Cat6A, single/multimode fiber optics).
   - Server Rack Architecture, Cable Dressing & Clean-Up (Wall-mounted & floor-standing 4U-47U).
@@ -20,9 +25,14 @@ Duotek Group is a technology solutions and IT infrastructure services provider b
   - Enterprise Servers & Storage Arrays (Dell PowerEdge, HPE ProLiant, Synology NAS/SAN).
   - Corporate Email Solutions (Microsoft 365, Google Workspace, SPF/DKIM/DMARC deliverability).
   - Turnkey IT Infrastructure Relocation & Commercial Office Fit-Out Decommissioning/Recommissioning.
-  - Bespoke Software Engineering & Digital Practice (Custom web portals, mobile apps, SaaS, APIs).
+
+## Software Engineering & Digital Practice
+- Core Technologies: Modern web & mobile frameworks (React, Next.js, Node.js, Python, Flutter, PostgreSQL, Redis, Docker).
+- Target Markets: Dubai, Abu Dhabi, Sharjah, and across the UAE & GCC.
+- Delivery Model: Agile sprints, rapid prototyping, turnkey cloud deployment, and long-term SLA maintenance.
+
 - [About Us](https://duotek.ae/about.html): Company history, mission, vision, certified engineering team, client portfolio (Aegon Shipping, Regale Innovation Polyclinic, Don Padel, Prompt Interiors), and disciplined 6-stage project execution framework.
-- [Contact Us](https://duotek.ae/contact.html): Office address, direct phone, email, and inquiry form for site surveys and technical quotations.
+- [Contact Us](https://duotek.ae/contact.html): Office address, direct phone, email, and inquiry form for software project proposals, site surveys, and technical quotations.
 
 ## Company Details
 - Legal Name: DUOTEK Information Technologies LLC
