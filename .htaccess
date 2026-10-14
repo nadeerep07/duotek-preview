@@ -14,42 +14,54 @@ RewriteRule ^(.*)$ https://duotek.ae/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html [NC]
 RewriteRule ^index\.html$ https://duotek.ae/ [R=301,L]
 
-# 3. Strip .html extension in browser address bar (e.g. /about.html -> /about)
+# 3. Strip .html extension in browser address bar (e.g. /about.html -> /about/)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html [NC]
-RewriteRule ^(.*)\.html$ https://duotek.ae/$1 [R=301,L]
+RewriteRule ^(.*)\.html$ https://duotek.ae/$1/ [R=301,L]
 
-# 4. Strip trailing slash for non-directories (e.g., /about/ -> /about)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ https://duotek.ae/$1 [L,R=301]
+# 4. Canonical directory redirects (ensures clean URLs resolve to directory with trailing slash)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ https://duotek.ae/$1/ [R=301,L]
 
 # 5. Clean aliases and friendly URLs
-RewriteRule ^software/?$ software-development.html [NC,L]
-RewriteRule ^software-development/?$ software-development.html [NC,L]
-RewriteRule ^terms/?$ terms.html [NC,L]
-RewriteRule ^careers/?$ careers.html [NC,L]
-RewriteRule ^terms-(and-conditions|of-service)/?$ /terms [R=301,L]
-RewriteRule ^(jobs|careers-at-duotek)/?$ /careers [R=301,L]
+RewriteRule ^software/?$ /software/ [R=301,L]
+RewriteRule ^software-development/?$ /software/ [R=301,L]
+RewriteRule ^terms-(and-conditions|of-service)/?$ /terms/ [R=301,L]
+RewriteRule ^(jobs|careers-at-duotek)/?$ /careers/ [R=301,L]
 
 # 6. Legacy WordPress / old indexed URLs redirect to clean modern pages
 RewriteRule ^wp-.*$ / [R=301,L]
-RewriteRule ^pharmacy.*$ /services [R=301,L]
-RewriteRule ^services/.*$ /services [R=301,L]
-RewriteRule ^about-us/?$ /about [R=301,L]
-RewriteRule ^contact-us/?$ /contact [R=301,L]
-RewriteRule ^it-.*$ /services [R=301,L]
-RewriteRule ^cctv.*$ /services [R=301,L]
-RewriteRule ^annual-.*$ /services [R=301,L]
-RewriteRule ^biometric.*$ /services [R=301,L]
-RewriteRule ^structured-.*$ /services [R=301,L]
-RewriteRule ^network-.*$ /services [R=301,L]
-RewriteRule ^solutions/.*$ /services [R=301,L]
-RewriteRule ^products/.*$ /services [R=301,L]
+RewriteRule ^pharmacy.*$ /services/ [R=301,L]
+RewriteRule ^services/(.+)$ /services/ [R=301,L]
+RewriteRule ^about-us/?$ /about/ [R=301,L]
+RewriteRule ^contact-us/?$ /contact/ [R=301,L]
+RewriteRule ^it-.*$ /services/ [R=301,L]
+RewriteRule ^cctv.*$ /services/ [R=301,L]
+RewriteRule ^annual-.*$ /services/ [R=301,L]
+RewriteRule ^biometric.*$ /services/ [R=301,L]
+RewriteRule ^structured-.*$ /services/ [R=301,L]
+RewriteRule ^network-.*$ /services/ [R=301,L]
+RewriteRule ^solutions/.*$ /services/ [R=301,L]
+RewriteRule ^products/.*$ /services/ [R=301,L]
 
-# 7. Seamless Clean URLs (internally serve .html file for extensionless requests)
+# 7. Seamless Clean URLs (fallback for extensionless requests without directory)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# 8. Custom Branded 404 Error Page
+# 8. Cache-Control: prevent CDN and browser from serving stale builds
+<IfModule mod_headers.c>
+  # HTML pages: always revalidate so fresh deploys appear immediately
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+  # CSS and JS: revalidate every hour or on refresh
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# 9. Custom Branded 404 Error Page
 ErrorDocument 404 /404.html
