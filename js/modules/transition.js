@@ -14,8 +14,8 @@ export class PageTransition {
   init() {
     if (!this.curtain) return;
 
-    // Respect reduced motion or skip-curtain class
-    if (this.isReduced || document.documentElement.classList.contains('skip-curtain')) {
+    // Respect reduced motion, skip-curtain class, or mobile viewports (< 900px) for instant LCP
+    if (this.isReduced || document.documentElement.classList.contains('skip-curtain') || window.innerWidth <= 900) {
       this.dismissImmediate();
       return;
     }
@@ -137,11 +137,11 @@ export class PageTransition {
         ease: 'power3.inOut'
       }, '-=0.06');
 
-      // 4. Smooth cascade of site header and hero elements into view
+      // 4. Smooth cascade of site header and hero elements into view (maintaining opacity 1 for instant LCP)
       tl.fromTo(
         '.site-header',
-        { y: -16, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.45, ease: 'power2.out', clearProps: 'transform' },
+        { y: -10 },
+        { y: 0, duration: 0.35, ease: 'power2.out', clearProps: 'transform' },
         '-=0.38'
       );
 
@@ -151,8 +151,8 @@ export class PageTransition {
       if (heroElements.length > 0) {
         tl.fromTo(
           heroElements,
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.48, stagger: 0.05, ease: 'power2.out' },
+          { y: 12 },
+          { y: 0, duration: 0.35, stagger: 0.03, ease: 'power2.out', clearProps: 'transform' },
           '-=0.3'
         );
       }

@@ -5,14 +5,15 @@
 
 export const companyProfile = {
   name: 'Duotek Group',
-  tagline: 'Smarter spaces. Better days.',
+  tagline: 'IT, ELV & software solutions in Dubai.',
   phone: '+971 50 504 9838',
   phoneTel: '+971505049838',
   email: 'sales@duotek.ae',
   website: 'duotek.ae',
   location: 'Dubai & United Arab Emirates',
-  about: 'Duotek Group is a technology solutions and IT infrastructure services provider based in the United Arab Emirates, delivering reliable, scalable, and innovative solutions for businesses, commercial spaces, offices, and residential properties. We specialize in end-to-end technology solutions from planning and installation to configuration, maintenance, and ongoing technical support.',
-  mission: 'To deliver dependable IT infrastructure, security, communication, and automation solutions that empower businesses and residential clients through technology.',
+  founded: '2015',
+  about: 'Established in Dubai in 2015, Duotek Group delivers end-to-end IT and ELV infrastructure, managed technical support, security, communications, automation, and custom software for businesses and connected properties across the UAE.',
+  mission: 'To deliver dependable IT infrastructure, security, communication, automation, and software solutions that help UAE organizations operate more effectively.',
   vision: 'To become a trusted technology solutions partner in the UAE, recognized for our technical expertise, customer satisfaction, and commitment to quality.'
 };
 
@@ -22,13 +23,13 @@ export const corePillars = [
     index: 0,
     number: '00',
     category: 'Overview',
-    eyebrow: 'Technology for real life • UAE',
-    titleMain: 'Smarter',
-    titleSub: 'spaces.<br>Better days.',
-    description: 'Duotek Group delivers dependable IT infrastructure, security systems, business communication, and smart automation across Dubai and the UAE.',
-    caption: 'Duotek Group / UAE Technology Infrastructure',
-    image: 'assets/images/hero-workspace.webp',
-    imageAlt: 'Duotek Group contemporary technology workspace in the UAE'
+    eyebrow: 'IT, ELV & Software • UAE',
+    titleMain: 'IT, ELV & software',
+    titleSub: 'solutions in Dubai.',
+    description: 'Plan, install, support, and improve your business technology with one UAE team—from IT AMC and ELV infrastructure to custom web and mobile software.',
+    caption: 'Duotek Group / IT, ELV & Software Engineering',
+    image: 'assets/images/service-software-v2.webp',
+    imageAlt: 'Duotek custom software and cloud engineering team in Dubai'
   },
   {
     id: 'amc',
@@ -36,9 +37,9 @@ export const corePillars = [
     number: '01',
     category: 'IT AMC Support',
     eyebrow: '01 / 05 — IT Annual Maintenance Contract',
-    titleMain: 'Ready for every',
-    titleSub: 'day.',
-    description: 'Comprehensive IT Annual Maintenance Contract (AMC) services to help businesses maintain reliable operations and minimize technical downtime with scheduled health audits and rapid response.',
+    titleMain: 'IT AMC support',
+    titleSub: 'for Dubai businesses.',
+    description: 'Keep users, devices, networks, and essential office systems working with preventive maintenance and support matched to your environment.',
     highlights: [
       'Desktop, laptop, and OS troubleshooting',
       'Hardware, software, and printer support',
@@ -46,7 +47,7 @@ export const corePillars = [
       'Preventive health checks & monthly service reporting'
     ],
     caption: 'IT AMC & Proactive Maintenance / 01',
-    image: 'assets/images/service-amc.webp',
+    image: 'assets/images/service-amc-v2.webp',
     imageAlt: 'Duotek IT maintenance and proactive server support'
   },
   {
@@ -55,17 +56,17 @@ export const corePillars = [
     number: '02',
     category: 'Cabling & Server Racks',
     eyebrow: '02 / 05 — Structured Cabling & Server Racks',
-    titleMain: 'Clean lines.',
-    titleSub: 'Solid core.',
-    description: 'Fluke-tested Cat6/Cat6A structured cabling and organized network rack installations for offices, data closets, and commercial facilities. Clean cable dressing, port labeling, and scalable topology.',
+    titleMain: 'Structured cabling',
+    titleSub: 'built to stay organized.',
+    description: 'Cat6/Cat6A structured cabling and serviceable network racks for offices, fit-outs, data closets, and commercial facilities across the UAE.',
     highlights: [
       'Cat6 & Cat6A data and voice network cabling',
       'Patch panel termination, labeling & cable dressing',
       'Wall-mounted & floor-standing network rack installation',
-      'Fluke cable certification testing & server room setups'
+      'Project-specific cable testing & server room setups'
     ],
     caption: 'Structured Cabling & Rack Setup / 02',
-    image: 'assets/images/service-cloud.webp',
+    image: 'assets/images/service-cabling.webp',
     imageAlt: 'Professional network rack and structured cabling infrastructure'
   },
   {
@@ -74,9 +75,9 @@ export const corePillars = [
     number: '03',
     category: 'Telephony & 3CX',
     eyebrow: '03 / 05 — IP Telephony & 3CX PBX Solutions',
-    titleMain: 'Connected',
-    titleSub: 'conversations.',
-    description: 'Modern IP phone systems and 3CX IP PBX deployments that unify business communications. Flexible softphones, multi-level IVR, remote extensions, and cost-effective SIP trunks.',
+    titleMain: '3CX telephony',
+    titleSub: 'for connected teams.',
+    description: 'Modern IP phone systems for reception, office teams, and remote staff, with extensions, softphones, call routing, IVR, and SIP trunk configuration.',
     highlights: [
       '3CX IP PBX deployment, licensing, and remote softphones',
       'IP desk phones, SIP trunks & extension management',
@@ -84,7 +85,7 @@ export const corePillars = [
       'Voicemail, call recording & mobile apps for remote work'
     ],
     caption: 'IP Telephony & 3CX Solutions / 03',
-    image: 'assets/images/service-web.webp',
+    image: 'assets/images/service-telephony.webp',
     imageAlt: 'Duotek modern IP telephony and 3CX business phone deployment'
   },
   {
@@ -93,9 +94,9 @@ export const corePillars = [
     number: '04',
     category: 'Security & Access',
     eyebrow: '04 / 05 — CCTV Surveillance & Access Control',
-    titleMain: 'Confidence',
-    titleSub: 'built in.',
-    description: 'Commercial-grade IP CCTV surveillance and smart access control systems. High-definition monitoring, biometric/face-recognition terminals, and secure electromagnetic door locks.',
+    titleMain: 'CCTV & access control',
+    titleSub: 'planned for your site.',
+    description: 'IP surveillance and controlled entry systems designed around entrances, restricted areas, server rooms, workflows, and remote visibility.',
     highlights: [
       'High-resolution IP cameras, NVR/DVR & remote live viewing',
       'Biometric, facial recognition & RFID card access control',
@@ -103,7 +104,7 @@ export const corePillars = [
       'Coverage design, PoE switches & compliance setups'
     ],
     caption: 'CCTV & Biometric Access Control / 04',
-    image: 'assets/images/service-security.webp',
+    image: 'assets/images/service-security-v2.webp',
     imageAlt: 'Commercial CCTV surveillance and access control system'
   },
   {
@@ -112,9 +113,9 @@ export const corePillars = [
     number: '05',
     category: 'Smart Automation',
     eyebrow: '05 / 05 — Smart Automation & Controls',
-    titleMain: 'Spaces that',
-    titleSub: 'respond.',
-    description: 'Intelligent automation for residences, executive offices, and luxury environments. Intuitive lighting scenes, motorized climate and blinds, smart locks, and unified control panels.',
+    titleMain: 'Smart automation',
+    titleSub: 'made practical.',
+    description: 'Integrated lighting, climate, motorized blinds, security, and mobile controls for residences, executive offices, and connected commercial environments.',
     highlights: [
       'Smart architectural lighting & scene-based switching',
       'Automated climate, smart thermostats & motorized blinds',
@@ -122,7 +123,7 @@ export const corePillars = [
       'Wall control panels & smartphone app synchronization'
     ],
     caption: 'Smart Home & Building Automation / 05',
-    image: 'assets/images/service-automation.webp',
+    image: 'assets/images/service-automation-v2.webp',
     imageAlt: 'Smart home automation control panel and ambient lighting'
   }
 ];
@@ -132,7 +133,7 @@ export const allServicesCatalog = [
     category: 'IT Support & Systems',
     code: 'A',
     title: 'IT AMC – Annual Maintenance Contract',
-    shortDesc: 'Comprehensive maintenance contracts to ensure zero downtime and reliable day-to-day IT operations for UAE enterprises.',
+    shortDesc: 'Structured maintenance and support plans designed to reduce disruption and keep day-to-day IT operations reliable.',
     items: [
       'Desktop and laptop maintenance and troubleshooting',
       'Hardware and software support & OS configuration',
@@ -149,7 +150,7 @@ export const allServicesCatalog = [
     category: 'Infrastructure & Cabling',
     code: 'B',
     title: 'Structured Cabling Solutions',
-    shortDesc: 'Clean, reliable, and Fluke-certified Cat6/Cat6A cabling installations for corporate offices, commercial towers, and retail spaces.',
+    shortDesc: 'Clean Cat6/Cat6A cabling installations with project-specific testing for offices, commercial buildings, and retail spaces.',
     items: [
       'Cat6 and Cat6A network cabling infrastructure',
       'Data and voice cabling infrastructure planning',
@@ -160,7 +161,7 @@ export const allServicesCatalog = [
       'Network cable dressing, bundling and cable management',
       'Cable identification with durable professional labeling',
       'Network point testing and connectivity verification',
-      'Fluke cable testing and certification reports',
+      'Project-specific cable testing and performance reports',
       'Existing network cabling inspection and rectification',
       'New office fit-out and commercial building cabling projects'
     ]
@@ -208,11 +209,11 @@ export const allServicesCatalog = [
     category: 'Business Communication',
     code: 'E',
     title: '3CX IP PBX Solutions',
-    shortDesc: 'Certified 3CX communication platforms offering softphones, video conferencing, live chat integration, and call queues.',
+    shortDesc: '3CX communication platforms offering softphones, video conferencing, live chat integration, and call queues.',
     items: [
       '3CX system deployment, on-premise or cloud hosted',
       'IP PBX setup and centralized extension management',
-      'Certified SIP trunk configuration with local telcos',
+      'SIP trunk configuration with compatible local telecom services',
       'Zero-touch IP phone provisioning',
       'Inbound and outbound smart call routing',
       'IVR and multi-lingual digital receptionist setup',
@@ -229,9 +230,9 @@ export const allServicesCatalog = [
     category: 'Security & Access',
     code: 'F',
     title: 'CCTV Surveillance Systems',
-    shortDesc: 'High-definition IP surveillance with remote viewing, smart analytics, NVR storage, and SIRA-compliant Hikvision CCTV cameras in Dubai.',
+    shortDesc: 'High-definition IP surveillance with remote viewing, smart analytics, NVR storage, and system designs aligned with applicable project requirements.',
     items: [
-      'Hikvision CCTV Camera Dubai supply, installation and maintenance',
+      'Hikvision IP camera supply, installation, and maintenance',
       'Indoor dome, outdoor bullet, PTZ and turret cameras with ColorVu',
       'Network Video Recorder (NVR) configuration and storage sizing',
       'Digital Video Recorder (DVR) solutions where applicable',
@@ -240,7 +241,7 @@ export const allServicesCatalog = [
       'CCTV cabling, conduits, and weather-proof termination',
       'Secure remote viewing configuration on iOS, Android & PC',
       'Recording schedules, motion detection, and playback archiving',
-      'CCTV system commissioning, testing and SIRA compliance audit',
+      'CCTV system commissioning, testing, and project-specific compliance coordination',
       'Existing camera system troubleshooting and sensor cleaning',
       'Preventive maintenance visits and system expansion upgrades'
     ]
@@ -251,7 +252,7 @@ export const allServicesCatalog = [
     title: 'Access Control Systems',
     shortDesc: 'Biometric, RFID card, and facial recognition access control in Dubai to secure sensitive premises, server rooms, and office perimeters.',
     items: [
-      'Access Control Dubai turnkey installation and system maintenance',
+      'Turnkey access control installation and system maintenance',
       'Hikvision Access Control facial recognition (MinMoe) & biometric terminals',
       'RFID card and key-fob access control systems',
       'PIN code and digital keypad access systems',
@@ -276,7 +277,7 @@ export const allServicesCatalog = [
       'Automated switching and intelligent electrical control',
       'Smart motorized curtain and blind control',
       'Smart thermostat and AC climate control integration',
-      'Professional Speakers Dubai: Bosch & JBL commercial sound & background music',
+      'Bosch and JBL commercial sound and background music systems',
       'Smart digital door lock integration with keyless access',
       'CCTV and smart security sensor integration',
       'Motion sensors, door sensors and automation triggers',
@@ -319,7 +320,7 @@ export const allServicesCatalog = [
       'Microsoft 365 (Office 365) business email configuration',
       'Google Workspace corporate email deployment',
       'Outlook desktop, mobile app, and webmail setup for staff',
-      'Seamless email data migration from legacy servers without data loss',
+      'Planned email data migration from legacy servers with validation and backups',
       'DNS, MX, SPF, DKIM, and DMARC authentication configuration',
       'Shared mailboxes, department aliases, and distribution groups',
       'Email synchronization across desktop, laptop, and smartphones',
@@ -335,11 +336,11 @@ export const allServicesCatalog = [
     shortDesc: 'Enterprise-grade LAN/WAN, managed switches, high-speed business Wi-Fi, VLAN segmentation, and hardware firewalls in Dubai.',
     items: [
       'Local Area Network (LAN) and Wide Area Network (WAN) setup',
-      'Aruba Access Point Dubai Wi-Fi 6 wireless deployments & roaming',
-      'Cisco Switch Supplier Dubai: Enterprise managed core & PoE switches',
-      'UniFi Switch Dubai: Ubiquiti UniFi switches, gateways & Cloud Keys',
-      'Fortinet Firewall Dubai: FortiGate UTM security & threat protection',
-      'DrayTek Router Dubai: High-availability multi-WAN & VPN setup',
+      'Aruba Wi-Fi 6 wireless deployments and managed roaming',
+      'Cisco enterprise managed core and PoE switches',
+      'Ubiquiti UniFi switches, gateways, and Cloud Keys',
+      'Fortinet FortiGate firewall security and threat protection',
+      'DrayTek multi-WAN failover and site-to-site VPN setup',
       'Enterprise router, core switch, and edge switch configuration',
       'Hardware firewall installation, security policies, and UTM setup',
       'Business Wi-Fi roaming, guest portal, and bandwidth management',
@@ -376,7 +377,7 @@ export const industriesList = [
   { name: 'Corporate Offices & Business Centres', desc: 'Secure networks, IP telephony, cabling, and responsive IT AMC.' },
   { name: 'Interior Fit-Out & Contracting', desc: 'Cabling rough-ins, server racks, CCTV, and access control for projects.' },
   { name: 'Retail Shops & Showrooms', desc: 'PoE surveillance, reliable Wi-Fi, background music, and POS networking.' },
-  { name: 'Clinics & Healthcare Facilities', desc: 'Secure data management, IP phones, surveillance, and uninterrupted uptime.' },
+  { name: 'Clinics & Healthcare Facilities', desc: 'Secure data handling, IP phones, surveillance, and infrastructure planned for continuity.' },
   { name: 'Educational Institutions', desc: 'Campus-wide structured cabling, secure Wi-Fi, and access-controlled zones.' },
   { name: 'Hotels & Hospitality', desc: 'Guest Wi-Fi, PBX phone systems, surveillance coverage, and lighting controls.' },
   { name: 'Warehouses & Industrial Facilities', desc: 'Long-distance fiber/copper runs, ruggedized CCTV, and network racks.' },
@@ -398,7 +399,7 @@ export const projectApproachSteps = [
   {
     step: '03',
     title: 'Supply & Installation',
-    desc: 'Delivering genuine equipment, structured cabling, rack dressing, and professional on-site mounting.'
+    desc: 'Coordinating equipment, structured cabling, rack dressing, and professional on-site installation.'
   },
   {
     step: '04',
@@ -421,26 +422,24 @@ export const whyChooseDuotek = [
   { title: 'Comprehensive IT & ELV Under One Roof', text: 'From cabling and racks to servers, telephony, CCTV, and smart automation.' },
   { title: 'Professional Installation & Clean Workmanship', text: 'Rigorous cabling practices, proper labeling, and organized server racks.' },
   { title: 'Tailored Solutions for Your Scale', text: 'Customized configurations designed around your operational requirements and budget.' },
-  { title: 'Reliability, Security & Performance', text: 'High-grade components, redundancy planning, and certified testing standards.' },
+  { title: 'Reliability, Security & Performance', text: 'Business-grade components, redundancy planning, and project-specific testing.' },
   { title: 'Preventive Maintenance & Fast Support', text: 'Dedicated IT AMC packages designed to prevent issues before downtime occurs.' },
   { title: 'Support for New & Existing Systems', text: 'Expertise in fresh office fit-outs as well as auditing and rectifying legacy setups.' }
 ];
 
 /**
  * =========================================================================
- * DIGITAL SOLUTIONS & SOFTWARE PRACTICE (MODULAR ARCHITECTURE)
- * Status: Active Expanding Practice (Kept separate from primary 11 IT & ELV services)
- * Easy to remove: Simply delete this export and the HTML preview sections.
- * Does NOT touch active corePillars or allServicesCatalog.
+ * SOFTWARE ENGINEERING PRACTICE
+ * A core Duotek capability presented alongside the 11 IT and ELV service lines.
  * =========================================================================
  */
 export const digitalSolutionsPractice = [
   {
     id: 'software-dev',
-    status: 'Digital Engineering Practice',
+    status: 'Core Software Engineering Practice',
     badge: 'Web • Mobile • Cloud',
     title: 'Custom Software & Digital Solutions',
-    shortDesc: 'Engineering custom web platforms, native mobile applications, enterprise automation systems, and cloud APIs.',
+    shortDesc: 'Custom web platforms, mobile applications, business automation, integrations, and cloud APIs designed around operational requirements.',
     capabilities: [
       {
         title: 'Custom Web Applications',
@@ -461,4 +460,3 @@ export const digitalSolutionsPractice = [
     ]
   }
 ];
-

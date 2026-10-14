@@ -6,18 +6,22 @@
   <meta name="theme-color" content="#f3f0eb">
   <meta name="google-site-verification" content="cRvyJA8YIC-1PwGe5ktnxgXgvlj1OjWPJjN3kkDeWRs">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0"></script>
+  <!-- Google tag (gtag.js) — production only -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VCD0B7H0G0');
+    if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VCD0B7H0G0');
+    }
   </script>
-  <meta name="description" content="Learn about Duotek Group, a premier technology solutions, enterprise IT infrastructure, and custom software development company in Dubai and the UAE. Discover our engineering philosophy, digital capabilities, and disciplined 6-stage project execution framework.">
-  <meta name="keywords" content="custom software development Dubai, software development company UAE, mobile app development Dubai, web application development Dubai, enterprise software solutions UAE, Duotek Group Dubai, IT infrastructure company UAE, ELV systems integrator Dubai, technology consulting UAE, IT AMC engineers Dubai, Aruba Access Point Dubai, Hikvision CCTV Camera Dubai, Access Control Dubai">
+  <meta name="description" content="Established in Dubai in 2015, Duotek delivers IT support, ELV infrastructure, networking, security, automation, and custom software across the UAE.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://duotek.ae/about.html">
+  <link rel="canonical" href="https://duotek.ae/about">
 
   <!-- Geo Targeting: Dubai, United Arab Emirates -->
   <meta name="geo.region" content="AE-DU">
@@ -28,18 +32,18 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Duotek Group">
-  <meta property="og:title" content="About Us — Duotek Group | UAE Enterprise IT Infrastructure & Custom Software Company">
-  <meta property="og:description" content="Discover Duotek Group's certified engineering practice, custom software development capabilities, client-first philosophy, and disciplined 6-stage project execution framework across Dubai and the UAE.">
-  <meta property="og:url" content="https://duotek.ae/about.html">
-  <meta property="og:image" content="https://duotek.ae/assets/images/about-workspace.webp">
-  <meta property="og:image:alt" content="Duotek Group Engineering Practice Headquarters Dubai">
+  <meta property="og:title" content="About Duotek | Dubai IT, ELV &amp; Software Company">
+  <meta property="og:description" content="Established in Dubai in 2015, Duotek delivers IT and ELV infrastructure, managed support, automation, and custom software across the UAE.">
+  <meta property="og:url" content="https://duotek.ae/about">
+  <meta property="og:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
+  <meta property="og:image:alt" content="Duotek Group technology practice in Dubai">
   <meta property="og:locale" content="en_AE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Us — Duotek Group | UAE Enterprise IT Infrastructure & Custom Software Company">
-  <meta name="twitter:description" content="Discover Duotek Group's certified engineering practice, custom software development, and disciplined 6-stage project execution framework across Dubai and the UAE.">
-  <meta name="twitter:image" content="https://duotek.ae/assets/images/about-workspace.webp">
+  <meta name="twitter:title" content="About Duotek | Dubai IT, ELV &amp; Software Company">
+  <meta name="twitter:description" content="Established in Dubai in 2015, Duotek delivers IT and ELV infrastructure, managed support, automation, and custom software across the UAE.">
+  <meta name="twitter:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
 
   <!-- Structured Data: BreadcrumbList & AboutPage JSON-LD -->
   <script type="application/ld+json">
@@ -59,19 +63,20 @@
             "@type": "ListItem",
             "position": 2,
             "name": "About Us",
-            "item": "https://duotek.ae/about.html"
+            "item": "https://duotek.ae/about"
           }
         ]
       },
       {
         "@type": "AboutPage",
-        "@id": "https://duotek.ae/about.html#aboutpage",
-        "url": "https://duotek.ae/about.html",
+        "@id": "https://duotek.ae/about#aboutpage",
+        "url": "https://duotek.ae/about",
         "name": "About Duotek Group — Enterprise IT & ELV Solutions",
-        "description": "Enterprise IT infrastructure engineering firm based in Dubai, UAE, specializing in turnkey commercial cabling, SIRA-compliant CCTV, 3CX IP PBX, smart building automation, and custom digital software solutions.",
+        "description": "Dubai technology company delivering IT and ELV infrastructure, managed support, communications, security, automation, and custom software solutions.",
         "publisher": {
           "@type": "Organization",
           "name": "DUOTEK Information Technologies LLC",
+          "foundingDate": "2015",
           "url": "https://duotek.ae/",
           "logo": "https://duotek.ae/assets/images/duotek-logo-transparent.png",
           "address": {
@@ -87,12 +92,12 @@
   }
   </script>
 
-  <title>About Us — Duotek Group | UAE IT Infrastructure & Smart Technology</title>
+  <title>About Duotek | Dubai IT, ELV &amp; Software Company</title>
 
   <!-- Favicon: Duotek Brand Emblem ('O') -->
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
   <!-- Typography: Manrope & DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,7 +105,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Design System CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
@@ -111,14 +116,15 @@
 
   <!-- Site Header -->
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="DUOTEK Information Technologies LLC">
-      <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40">
+    <a class="logo" href="/" aria-label="DUOTEK Information Technologies LLC">
+      <img src="/assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40">
     </a>
     <nav class="nav" aria-label="Main Navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/services">IT &amp; ELV Services</a>
+      <a href="/software">Software</a>
+      <a href="/about" class="active">About</a>
+      <a href="/contact">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="tel:+971505049838" class="header-phone-chip" title="Call Duotek Support: +971 50 504 9838">
@@ -127,7 +133,7 @@
         </span>
         <span class="phone-chip-number">+971 50 504 9838</span>
       </a>
-      <button type="button" class="header-cta" data-open-contact aria-label="Open contact inquiry modal">
+      <button type="button" class="header-cta" data-open-contact aria-label="Let's talk — Open contact inquiry modal">
         Let's talk <span>↗</span>
       </button>
       <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
@@ -142,14 +148,15 @@
     <div class="mobile-nav-backdrop"></div>
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
-        <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
+        <img src="/assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
         <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
       </div>
       <nav class="mobile-nav-links" aria-label="Mobile Navigation">
-        <a href="index.html"><span>Home</span><span class="nav-arrow">→</span></a>
-        <a href="about.html" class="active"><span>About</span><span class="nav-arrow">→</span></a>
-        <a href="services.html"><span>Services Catalog (11)</span><span class="nav-arrow">→</span></a>
-        <a href="contact.html"><span>Contact &amp; Dubai HQ</span><span class="nav-arrow">→</span></a>
+        <a href="/"><span>Home</span><span class="nav-arrow">→</span></a>
+        <a href="/services"><span>IT &amp; ELV Services (11)</span><span class="nav-arrow">→</span></a>
+        <a href="/software"><span>Custom Software &amp; Apps</span><span class="nav-arrow">→</span></a>
+        <a href="/about" class="active"><span>About</span><span class="nav-arrow">→</span></a>
+        <a href="/contact"><span>Contact</span><span class="nav-arrow">→</span></a>
       </nav>
       <div class="mobile-nav-footer">
         <a href="tel:+971505049838" class="mobile-nav-action-btn phone">
@@ -171,13 +178,13 @@
     <!-- Subpage Hero Banner -->
     <section class="page-hero" aria-label="About Duotek Group Hero">
       <div class="page-hero-inner">
-        <span class="page-hero-eyebrow">Company Profile &amp; Ethos</span>
-        <h1>Engineered for reliability.<br><em>Built on trust.</em></h1>
+        <span class="page-hero-eyebrow">Dubai Technology Company • Established 2015</span>
+        <h1>One team for IT, ELV<br><em>and custom software.</em></h1>
         <p>
-          Duotek Group is a technology solutions and IT infrastructure services provider based in the United Arab Emirates, delivering reliable, scalable, and innovative solutions for commercial spaces, offices, and residential properties.
+          Established in Dubai in 2015, Duotek Group delivers IT and ELV infrastructure, managed support, security, communications, automation, and custom software for organizations and connected properties across the UAE.
         </p>
         <div class="page-breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
           <span>About Us</span>
         </div>
@@ -188,15 +195,15 @@
     <section class="about-section" style="background: var(--color-bg); border-top: none;">
       <div class="about-header" style="max-width: 900px; text-align: left; margin: 0 auto 50px;">
         <div class="section-eyebrow">Who We Are</div>
-        <h2>Delivering seamless technology for UAE enterprises &amp; residences.</h2>
+        <h2>A Dubai IT company connecting infrastructure, security, and software.</h2>
         <p style="margin: 20px 0 0; font-size: 17px; line-height: 1.75; color: var(--color-text);">
-          We specialize in comprehensive IT support and maintenance, structured cabling, network infrastructure, IP telephony, CCTV surveillance, access control, server configuration, business email solutions, and smart home automation.
+          Founded in Dubai in 2015, Duotek began with a practical goal: help UAE businesses run dependable technology environments. Our core work covers IT support, structured cabling, networking, servers, IP telephony, CCTV, access control, and smart building systems.
         </p>
         <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: var(--color-text-muted);">
-          Our goal is to provide end-to-end technology solutions that help businesses operate efficiently, securely, and seamlessly. From initial site planning and cable installation to server configuration, preventive maintenance, and responsive technical support, we deliver solutions tailored to each client's specific requirements.
+          Our software engineering practice works alongside that infrastructure capability. We design web platforms, mobile applications, cloud APIs, integrations, and workflow automations that connect with the systems, teams, and physical spaces our clients already use.
         </p>
         <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: var(--color-text-muted);">
-          At Duotek, we focus on quality workmanship, dependable service, professional project execution, and long-term customer relationships across Dubai and the wider UAE.
+          From site assessment and installation to software delivery, documentation, maintenance, and ongoing support, each engagement is scoped around the client's operational requirements rather than a one-size-fits-all package.
         </p>
       </div>
 
@@ -206,7 +213,7 @@
           <span class="card-badge">Our Mission</span>
           <h3>Empowering through dependable technology.</h3>
           <p>
-            To deliver dependable IT infrastructure, security, communication, and automation solutions that empower businesses and residential clients across the UAE through seamless, high-performance technology.
+            To deliver dependable IT infrastructure, security, communications, automation, and software that help UAE organizations operate securely and efficiently.
           </p>
         </div>
 
@@ -214,7 +221,7 @@
           <span class="card-badge">Our Vision</span>
           <h3>A trusted technology partner in the UAE.</h3>
           <p>
-            To become the most trusted technology solutions partner in the United Arab Emirates, recognized for our technical expertise, quality workmanship, customer satisfaction, and long-term client relationships.
+            To be a trusted technology partner in the United Arab Emirates, recognized for practical engineering, quality workmanship, responsive support, and long-term client relationships.
           </p>
         </div>
       </div>
@@ -224,15 +231,15 @@
     <section class="approach-section" style="background: #f7f5f0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
       <div class="about-header" style="margin-bottom: 45px;">
         <div class="section-eyebrow">Why Choose Duotek Group</div>
-        <h2>Quality workmanship, certified standards, dependable execution.</h2>
+        <h2>Why UAE organizations choose Duotek.</h2>
       </div>
 
       <div class="why-us-grid">
         <div class="why-card">
           <div class="why-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
           <div>
-            <h3>Comprehensive IT &amp; ELV Under One Roof</h3>
-            <p>From structured cabling and server racks to PBX telephony, CCTV surveillance, servers, and smart automation.</p>
+            <h3>IT, ELV &amp; Software Under One Roof</h3>
+            <p>From structured cabling, networks, telephony, and security to custom web platforms, mobile apps, APIs, and workflow automation.</p>
           </div>
         </div>
 
@@ -256,7 +263,7 @@
           <div class="why-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
           <div>
             <h3>Reliability, Security &amp; High Performance</h3>
-            <p>Industry-certified equipment, redundancy planning, and Fluke verification standards on every run.</p>
+            <p>Business-grade equipment, redundancy planning, and project-specific testing and certification where required.</p>
           </div>
         </div>
 
@@ -284,7 +291,7 @@
         <div class="section-eyebrow">Our Methodology</div>
         <h2>A disciplined 6-step project approach.</h2>
         <p style="color: var(--color-text-muted); font-size: 16px; margin: 12px 0 0;">
-          Ensuring quality workmanship, transparent documentation, and on-time delivery on every deployment.
+          A clear delivery path that keeps requirements, responsibilities, testing, and handover visible from the start.
         </p>
       </div>
 
@@ -302,7 +309,7 @@
         <div class="process-step-card">
           <span class="step-num">Step 03</span>
           <h3>Supply &amp; Installation</h3>
-          <p>Delivering genuine equipment, structured cabling, rack dressing, and professional on-site mounting.</p>
+          <p>Coordinating equipment, structured cabling, rack dressing, and professional on-site installation.</p>
         </div>
         <div class="process-step-card">
           <span class="step-num">Step 04</span>
@@ -326,9 +333,9 @@
     <section class="industries-section" id="industries" aria-label="Industries We Serve in the UAE">
       <div class="industries-header">
         <div class="section-eyebrow">Industries We Serve</div>
-        <h2>Engineered for every commercial and residential space.</h2>
+        <h2>Technology solutions for UAE businesses and properties.</h2>
         <p style="color: var(--color-text-muted); font-size: 15px; margin: 10px 0 0;">
-          From corporate high-rises to luxury private estates, we deliver solutions that align with your industry requirements.
+          We adapt infrastructure, support, security, automation, and software scope to the people, site conditions, and workflows in each environment.
         </p>
       </div>
 
@@ -347,7 +354,7 @@
         </div>
         <div class="industry-card">
           <strong>Clinics &amp; Healthcare Facilities</strong>
-          <p>Secure data management, IP phones, surveillance coverage, and maximum uptime.</p>
+          <p>Secure data handling, IP phones, surveillance coverage, and infrastructure planned for operational continuity.</p>
         </div>
         <div class="industry-card">
           <strong>Educational Institutions</strong>
@@ -378,9 +385,9 @@
     <section class="clients-showcase-section" id="clients" aria-label="Our Clients & Commercial Partnerships">
       <div class="clients-showcase-header">
         <div class="section-eyebrow">Client Partnerships &amp; Trust</div>
-        <h2>Trusted by prominent UAE businesses &amp; facilities.</h2>
+        <h2>Supporting businesses and facilities across the UAE.</h2>
         <p>
-          We partner with enterprises, healthcare providers, recreation academies, and commercial contractors to deliver zero-compromise IT and ELV infrastructure.
+          Our work spans logistics, healthcare, recreation, and commercial fit-outs, with each deployment planned around the client's site and operating requirements.
         </p>
       </div>
 
@@ -389,18 +396,18 @@
         <div class="showcase-client-card">
           <div class="showcase-top-row">
             <div class="showcase-logo-wrap">
-              <img src="assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy">
+              <img src="/assets/images/clients/client-aegon-shipping.png" alt="Aegon Shipping LLC logo" loading="lazy">
             </div>
             <span class="showcase-sector-badge">Maritime &amp; Logistics</span>
           </div>
           <div class="showcase-body">
             <h3>Aegon Shipping LLC</h3>
-            <p>Complete office telephony and network deployment featuring 3CX remote extensions, Fluke-tested Cat6 data drops, and dedicated IT AMC support ensuring 24/7 coordination for global freight operations.</p>
+            <p>A maritime and freight logistics business included among Duotek's selected UAE client relationships.</p>
           </div>
           <div class="showcase-tags">
-            <span class="showcase-tag">3CX IP Telephony</span>
-            <span class="showcase-tag">IT AMC Agreement</span>
-            <span class="showcase-tag">Structured Cat6 Cabling</span>
+            <span class="showcase-tag">Maritime</span>
+            <span class="showcase-tag">Freight Logistics</span>
+            <span class="showcase-tag">UAE Business</span>
           </div>
         </div>
 
@@ -408,18 +415,18 @@
         <div class="showcase-client-card">
           <div class="showcase-top-row">
             <div class="showcase-logo-wrap">
-              <img src="assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy">
+              <img src="/assets/images/clients/client-regale-polyclinic.png" alt="Regale Innovation Polyclinic logo" loading="lazy">
             </div>
             <span class="showcase-sector-badge">Healthcare &amp; Clinic</span>
           </div>
           <div class="showcase-body">
             <h3>Regale Innovation Polyclinic</h3>
-            <p>Engineered clinic data network with strict privacy compliance, biometric fingerprint access for sterile rooms, and crystal-clear IP CCTV coverage supporting daily patient consultations.</p>
+            <p>A Dubai healthcare provider included among Duotek's selected UAE client relationships.</p>
           </div>
           <div class="showcase-tags">
-            <span class="showcase-tag">Biometric Access Control</span>
-            <span class="showcase-tag">Clinic IP Surveillance</span>
-            <span class="showcase-tag">Medical IT Infrastructure</span>
+            <span class="showcase-tag">Healthcare</span>
+            <span class="showcase-tag">Clinic Operations</span>
+            <span class="showcase-tag">Dubai</span>
           </div>
         </div>
 
@@ -427,18 +434,18 @@
         <div class="showcase-client-card">
           <div class="showcase-top-row">
             <div class="showcase-logo-wrap">
-              <img src="assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy">
+              <img src="/assets/images/clients/client-don-padel-transparent.png" alt="Don Padel Sports Academy logo" loading="lazy">
             </div>
             <span class="showcase-sector-badge">Sports &amp; Leisure</span>
           </div>
           <div class="showcase-body">
             <h3>Don Padel Sports Academy</h3>
-            <p>Turnkey technology setup across premier padel sports courts featuring high-density guest Wi-Fi coverage, zoned public address music systems, and perimeter IP surveillance for players and visitors.</p>
+            <p>A sports and recreation brand included among Duotek's selected UAE client relationships.</p>
           </div>
           <div class="showcase-tags">
-            <span class="showcase-tag">High-Density Wi-Fi</span>
-            <span class="showcase-tag">Public Address Audio</span>
-            <span class="showcase-tag">Perimeter IP Cameras</span>
+            <span class="showcase-tag">Sports Facility</span>
+            <span class="showcase-tag">Recreation</span>
+            <span class="showcase-tag">UAE</span>
           </div>
         </div>
 
@@ -446,18 +453,18 @@
         <div class="showcase-client-card">
           <div class="showcase-top-row">
             <div class="showcase-logo-wrap">
-              <img src="assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy">
+              <img src="/assets/images/clients/client-prompt-interiors.png" alt="Prompt Interiors logo" loading="lazy">
             </div>
             <span class="showcase-sector-badge">Commercial Fit-Outs</span>
           </div>
           <div class="showcase-body">
             <h3>Prompt Interiors</h3>
-            <p>Close technical coordination during luxury commercial fit-out execution, providing Fluke-verified Cat6A cabling, server rack cable dressing, patch panel labeling, and turnkey ELV handover on contractor schedules.</p>
+            <p>A commercial interiors and fit-out company included among Duotek's selected UAE client relationships.</p>
           </div>
           <div class="showcase-tags">
-            <span class="showcase-tag">Cat6A Cabling Rough-in</span>
-            <span class="showcase-tag">Server Rack Dressing</span>
-            <span class="showcase-tag">Turnkey ELV Handover</span>
+            <span class="showcase-tag">Commercial Interiors</span>
+            <span class="showcase-tag">Fit-Out</span>
+            <span class="showcase-tag">UAE</span>
           </div>
         </div>
       </div>
@@ -471,23 +478,11 @@
         Contact Duotek Group today to schedule an initial site assessment or request an itemized proposal for your commercial or residential space in the UAE.
       </p>
 
-      <div class="direct-contact-pills">
-        <a href="tel:+971505049838" class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Phone: +971 50 504 9838
-        </a>
-        <a href="mailto:sales@duotek.ae" class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email: sales@duotek.ae
-        </a>
-        <span class="contact-pill-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color: var(--color-warm); flex-shrink: 0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Dubai &amp; United Arab Emirates
-        </span>
-      </div>
-
       <div class="end-actions">
-        <a href="contact.html" class="primary-cta">
+        <a href="/contact" class="primary-cta">
           Contact our team <span>↗</span>
         </a>
-        <a href="services.html" class="secondary-link" style="padding: 14px 24px; border: 1px solid var(--color-border); border-radius: 100px;">
+        <a href="/services" class="secondary-link" style="padding: 14px 24px; border: 1px solid var(--color-border); border-radius: 100px;">
           Explore all capabilities →
         </a>
       </div>
@@ -500,7 +495,7 @@
     <div class="footer-top-banner">
       <div class="footer-statement">
         <h3>Building dependable technology for the UAE's <em>forward-thinking spaces.</em></h3>
-        <p>Enterprise IT infrastructure, structured cabling, smart security, and building automation delivered with uncompromising precision.</p>
+        <p>IT infrastructure, structured cabling, security, automation, and software delivered from assessment through handover and support.</p>
       </div>
       <div class="footer-top-actions">
         <a href="https://wa.me/971505049838?text=Hello%20Duotek%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services." target="_blank" rel="noopener noreferrer" class="footer-top-whatsapp" title="WhatsApp Support">
@@ -515,13 +510,13 @@
       <!-- Col 1: Brand Identity & Social Presence -->
       <div class="footer-col footer-col-brand">
         <div class="footer-emblem-wrap">
-          <a href="index.html" class="footer-logo-link" aria-label="DUOTEK Home">
-            <img src="assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38">
+          <a href="/" class="footer-logo-link" aria-label="DUOTEK Home">
+            <img src="/assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38">
           </a>
         </div>
         <span class="footer-tagline-badge">Your IT Partner in the UAE</span>
         <p class="footer-desc">
-          Turnkey technology solutions provider based in Dubai, delivering reliable IT AMC, certified structured cabling, telephony, CCTV, and smart automation.
+          Dubai technology company delivering IT support, structured cabling, networking, telephony, CCTV, access control, automation, and custom software.
         </p>
         <div class="footer-socials" aria-label="Social media channels">
           <a href="https://www.facebook.com/share/1C9YsbggDi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Duotek Facebook">
@@ -536,9 +531,9 @@
         </div>
       </div>
 
-      <!-- Col 2: Dubai Headquarters -->
+      <!-- Col 2: Dubai Office -->
       <div class="footer-col">
-        <h4>Dubai Headquarters</h4>
+        <h4>Dubai Office</h4>
         <ul class="footer-address-list">
           <li>
             <div class="addr-icon">
@@ -556,7 +551,10 @@
             <div class="addr-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.25l-8 5-8-5V6l8 5 8-5v2.25z"/></svg>
             </div>
-            <a href="mailto:sales@duotek.ae">sales@duotek.ae</a>
+            <div>
+              <a href="mailto:sales@duotek.ae">sales@duotek.ae</a><br>
+              <a href="mailto:info@duotek.ae" style="font-size: 13px; color: var(--color-text-muted);">info@duotek.ae</a>
+            </div>
           </li>
           <li>
             <div class="addr-icon">
@@ -577,13 +575,14 @@
       <div class="footer-col">
         <h4>Core Solutions</h4>
         <ul class="footer-links-list">
-          <li><a href="services.html#service-card-A">IT AMC Maintenance</a></li>
-          <li><a href="services.html#service-card-B">Structured Cabling Cat6/6A</a></li>
-          <li><a href="services.html#service-card-C">Network Racks &amp; Servers</a></li>
-          <li><a href="services.html#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
-          <li><a href="services.html#service-card-F">CCTV Surveillance Systems</a></li>
-          <li><a href="services.html#service-card-G">Biometric Access Control</a></li>
-          <li><a href="services.html#service-card-H">Smart Home Automation</a></li>
+          <li><a href="/software">Custom Software Development</a></li>
+          <li><a href="/services#service-card-A">IT AMC Maintenance</a></li>
+          <li><a href="/services#service-card-B">Structured Cabling Cat6/6A</a></li>
+          <li><a href="/services#service-card-C">Network Racks &amp; Servers</a></li>
+          <li><a href="/services#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
+          <li><a href="/services#service-card-F">CCTV Surveillance Systems</a></li>
+          <li><a href="/services#service-card-G">Biometric Access Control</a></li>
+          <li><a href="/services#service-card-H">Smart Home Automation</a></li>
         </ul>
       </div>
 
@@ -591,12 +590,13 @@
       <div class="footer-col">
         <h4>Explore &amp; Policies</h4>
         <ul class="footer-links-list">
-          <li><a href="about.html">About Duotek Group</a></li>
-          <li><a href="about.html#industries">Industries We Serve</a></li>
-          <li><a href="about.html#approach">6-Step Methodology</a></li>
-          <li><a href="contact.html">Request Project Pricing</a></li>
+          <li><a href="/about">About Duotek Group</a></li>
+          <li><a href="/about#industries">Industries We Serve</a></li>
+          <li><a href="/about#approach">6-Step Methodology</a></li>
+          <li><a href="/careers">Careers at Duotek</a></li>
+          <li><a href="/contact">Request Project Pricing</a></li>
           <li><a href="#" onclick="alert('Duotek Information Technologies LLC Privacy Policy: We value and protect customer data privacy under UAE regulatory standards.'); return false;">Privacy Statement</a></li>
-          <li><a href="#" onclick="alert('Duotek Information Technologies LLC Terms of Service: Professional service delivery and technical agreements.'); return false;">Terms of Service</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
@@ -605,11 +605,17 @@
     <div class="footer-bottom-row">
       <p>© 2026 DUOTEK Information Technologies LLC • Commercial License • Dubai, United Arab Emirates.</p>
       <div class="footer-legal-links">
-        <a href="about.html">About</a>
+        <a href="/about">About</a>
         <span>•</span>
-        <a href="services.html">Services</a>
+        <a href="/services">IT &amp; ELV Services</a>
         <span>•</span>
-        <a href="contact.html">Contact</a>
+        <a href="/software">Software</a>
+        <span>•</span>
+        <a href="/careers">Careers</a>
+        <span>•</span>
+        <a href="/contact">Contact</a>
+        <span>•</span>
+        <a href="/terms">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
@@ -637,7 +643,7 @@
       <button type="button" class="contact-close-btn" aria-label="Close dialog">×</button>
       <div class="modal-eyebrow">Duotek Group • UAE</div>
       <h3 id="modal-title">Let's talk technology.</h3>
-      <p>Tell us about your spaces, systems, or project scope. Our technical team responds within one business day.</p>
+      <p>Tell us about your site, systems, users, or software requirement. Our team will review the scope and follow up with the appropriate next step.</p>
       
       <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
         <input type="hidden" name="access_key" value="c4aa15c7-6c6f-4710-814a-abb81bd245cd">
@@ -675,7 +681,7 @@
             <option value="Business Email Solutions & Configuration">Business Email Solutions (Microsoft 365/Google)</option>
             <option value="IT Networking Solutions">IT Networking Solutions (Routers/Firewalls/Wi-Fi)</option>
             <!-- Removable: Digital Solutions Practice -->
-            <option value="Custom Software & Web Development">Custom Software &amp; Web Development (Digital Division)</option>
+            <option value="Custom Software & Web Development">Custom Software, Web &amp; Mobile Development</option>
           </select>
         </div>
 
@@ -697,6 +703,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 
   <!-- Application Bootstrap -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

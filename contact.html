@@ -6,18 +6,22 @@
   <meta name="theme-color" content="#f3f0eb">
   <meta name="google-site-verification" content="cRvyJA8YIC-1PwGe5ktnxgXgvlj1OjWPJjN3kkDeWRs">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0"></script>
+  <!-- Google tag (gtag.js) — production only -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VCD0B7H0G0');
+    if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VCD0B7H0G0';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VCD0B7H0G0');
+    }
   </script>
-  <meta name="description" content="Contact Duotek Group in Dubai, UAE. Inquire about custom software development, mobile app engineering, IT AMC, structured cabling, IP telephony, CCTV surveillance, and enterprise networking. Direct phone, email, and office location in Deira, Dubai.">
-  <meta name="keywords" content="custom software development Dubai, software development company UAE, mobile app development quotation Dubai, web development company Dubai, contact Duotek Dubai, IT AMC quotation UAE, office cabling estimate Dubai, 3CX phone system supplier UAE, Aruba Access Point Dubai, Hikvision CCTV Camera Dubai, Access Control Dubai">
+  <meta name="description" content="Contact Duotek in Dubai for an IT AMC, ELV site survey, structured cabling, CCTV, 3CX telephony, automation, or custom software project consultation.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://duotek.ae/contact.html">
+  <link rel="canonical" href="https://duotek.ae/contact">
 
   <!-- Geo Targeting: Dubai, United Arab Emirates -->
   <meta name="geo.region" content="AE-DU">
@@ -28,17 +32,17 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Duotek Group">
-  <meta property="og:title" content="Contact Us — Duotek Group | Enterprise IT & Custom Software Engineering Dubai">
-  <meta property="og:description" content="Request a consultation, software proposal, site survey, or rapid quote for enterprise IT infrastructure and custom software engineering in Dubai & UAE.">
-  <meta property="og:url" content="https://duotek.ae/contact.html">
+  <meta property="og:title" content="Contact Duotek | IT, ELV &amp; Software Projects in Dubai">
+  <meta property="og:description" content="Discuss an IT support, ELV infrastructure, security, automation, or custom software project with Duotek's Dubai team.">
+  <meta property="og:url" content="https://duotek.ae/contact">
   <meta property="og:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
-  <meta property="og:image:alt" content="Duotek Group Dubai Headquarters & Engineering Office">
+  <meta property="og:image:alt" content="Duotek Group Dubai office and engineering workspace">
   <meta property="og:locale" content="en_AE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Us — Duotek Group | Enterprise IT & Custom Software Engineering Dubai">
-  <meta name="twitter:description" content="Request a software proposal, site survey, or rapid quote for enterprise IT & custom software in Dubai & UAE. Direct phone, email, and office details.">
+  <meta name="twitter:title" content="Contact Duotek | IT, ELV &amp; Software Projects in Dubai">
+  <meta name="twitter:description" content="Request a consultation or site survey for IT, ELV, security, automation, or custom software services in the UAE.">
   <meta name="twitter:image" content="https://duotek.ae/assets/images/hero-workspace.webp">
 
   <!-- Structured Data: BreadcrumbList & ContactPage JSON-LD -->
@@ -59,14 +63,14 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Contact Us",
-            "item": "https://duotek.ae/contact.html"
+            "item": "https://duotek.ae/contact"
           }
         ]
       },
       {
         "@type": "ContactPage",
-        "@id": "https://duotek.ae/contact.html#contactpage",
-        "url": "https://duotek.ae/contact.html",
+        "@id": "https://duotek.ae/contact#contactpage",
+        "url": "https://duotek.ae/contact",
         "name": "Contact Duotek Group",
         "description": "Reach out to Duotek Information Technologies LLC for IT AMC contracts, commercial structured cabling, PBX telephony, CCTV security, and software solutions.",
         "mainEntity": {
@@ -98,20 +102,24 @@
   }
   </script>
 
-  <title>Contact Us — Duotek Group | Dubai IT Infrastructure & Custom Software Engineering</title>
+  <title>Contact Duotek | IT, ELV &amp; Software Projects Dubai</title>
 
   <!-- Favicon: Duotek Brand Emblem ('O') -->
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
-  <!-- Typography: Manrope & DM Sans -->
+  <!-- Typography: Manrope & DM Sans (Optimized non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Manrope:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <!-- Design System CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
@@ -122,14 +130,15 @@
 
   <!-- Site Header -->
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="DUOTEK Information Technologies LLC">
-      <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40">
+    <a class="logo" href="/" aria-label="DUOTEK Information Technologies LLC">
+      <img src="/assets/images/duotek-logo-transparent.webp" alt="DUOTEK Information Technologies LLC" class="site-logo-img" width="116" height="40" fetchpriority="high">
     </a>
     <nav class="nav" aria-label="Main Navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="/">Home</a>
+      <a href="/services">IT &amp; ELV Services</a>
+      <a href="/software">Software</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="active">Contact</a>
     </nav>
     <div class="header-actions">
       <a href="tel:+971505049838" class="header-phone-chip" title="Call Duotek Support: +971 50 504 9838">
@@ -138,7 +147,7 @@
         </span>
         <span class="phone-chip-number">+971 50 504 9838</span>
       </a>
-      <button type="button" class="header-cta" data-open-contact aria-label="Open contact inquiry modal">
+      <button type="button" class="header-cta" data-open-contact aria-label="Let's talk — Open contact inquiry modal">
         Let's talk <span>↗</span>
       </button>
       <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
@@ -153,14 +162,15 @@
     <div class="mobile-nav-backdrop"></div>
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
-        <img src="assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
+        <img src="/assets/images/duotek-logo-transparent.png" alt="DUOTEK Information Technologies LLC" class="mobile-nav-logo-img" width="99" height="34">
         <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
       </div>
       <nav class="mobile-nav-links" aria-label="Mobile Navigation">
-        <a href="index.html"><span>Home</span><span class="nav-arrow">→</span></a>
-        <a href="about.html"><span>About</span><span class="nav-arrow">→</span></a>
-        <a href="services.html"><span>Services Catalog (11)</span><span class="nav-arrow">→</span></a>
-        <a href="contact.html" class="active"><span>Contact &amp; Dubai HQ</span><span class="nav-arrow">→</span></a>
+        <a href="/"><span>Home</span><span class="nav-arrow">→</span></a>
+        <a href="/services"><span>IT &amp; ELV Services (11)</span><span class="nav-arrow">→</span></a>
+        <a href="/software"><span>Custom Software &amp; Apps</span><span class="nav-arrow">→</span></a>
+        <a href="/about"><span>About</span><span class="nav-arrow">→</span></a>
+        <a href="/contact" class="active"><span>Contact</span><span class="nav-arrow">→</span></a>
       </nav>
       <div class="mobile-nav-footer">
         <a href="tel:+971505049838" class="mobile-nav-action-btn phone">
@@ -182,13 +192,13 @@
     <!-- Subpage Hero Banner -->
     <section class="page-hero" aria-label="Contact Duotek Group Hero">
       <div class="page-hero-inner">
-        <span class="page-hero-eyebrow">Connect With Us</span>
-        <h1>Let's build reliable<br><em>spaces together.</em></h1>
+        <span class="page-hero-eyebrow">Project Consultation • Dubai &amp; UAE</span>
+        <h1>Tell us what your technology<br><em>needs to achieve.</em></h1>
         <p>
-          Contact our technical team to discuss upcoming office fit-outs, IT AMC coverage, cabling projects, or commercial security across Dubai and the UAE.
+          Discuss an office fit-out, IT AMC, network, cabling, telephony, CCTV, access control, automation, or custom software requirement with our Dubai team.
         </p>
         <div class="page-breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
           <span>Contact Us</span>
         </div>
@@ -197,14 +207,14 @@
 
     <!-- Dedicated Contact Page Layout -->
     <section class="contact-page-section" aria-label="Contact Details and Inquiry Form">
-      <h2 class="visually-hidden">Headquarters Details &amp; Project Inquiry Form</h2>
+      <h2 class="visually-hidden">Office Details &amp; Project Inquiry Form</h2>
       <div class="contact-layout-grid">
         <!-- Left: Direct Info Cards -->
         <div class="contact-info-panel">
           <div class="contact-info-card">
             <h3>
               <span class="contact-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 2H9c-1.1 0-2 .9-2 2v3H5c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM5 9h2v2H5V9zm0 4h2v2H5v-2zm0 4h2v2H5v-2zm14 2H9V4h10v15zm-8-13h2v2h-2V6zm4 0h2v2h-2V6zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg></span>
-              Dubai Headquarters
+              Dubai Office
             </h3>
             <p>
               Business Village, Block B, Suite 903<br>
@@ -215,16 +225,14 @@
           <div class="contact-info-card">
             <h3>
               <span class="contact-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
-              Direct Phone &amp; Emergency Support
+              Direct Phone &amp; Project Support
             </h3>
             <p>
-              <a href="tel:+971505049838" class="contact-card-phone-chip" title="Call Duotek Support">
-                <span class="phone-chip-icon" aria-hidden="true">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                </span>
+              <a href="tel:+971505049838" class="contact-phone-highlight" title="Call Duotek Support: +971 50 504 9838">
                 <span>+971 50 504 9838</span>
-              </a><br>
-              <span style="font-size: 13px; color: var(--color-text-subtle); display: inline-block; margin-top: 6px;">Direct engineer line for consultations and active project coordination</span>
+                <span class="contact-call-indicator">Call ↗</span>
+              </a>
+              <span class="contact-phone-subtext">Direct line for project consultations and active work coordination</span>
             </p>
           </div>
 
@@ -246,17 +254,17 @@
             </h3>
             <p>
               Monday – Saturday: 8:00 AM – 6:00 PM<br>
-              Sunday: Emergency On-Call Support (for AMC Contract Clients)
+              Sunday: Support subject to the terms of your active AMC agreement
             </p>
           </div>
 
           <div class="contact-info-card" style="background: rgba(37, 211, 102, 0.08); border-color: rgba(37, 211, 102, 0.3);">
             <h3 style="color: #128c7e;">
               <span class="contact-card-icon" style="background: rgba(37, 211, 102, 0.2); color: #128c7e;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.652-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
-              Instant WhatsApp Support
+              WhatsApp Project Enquiries
             </h3>
             <p style="margin-bottom: 14px;">
-              Need an instant answer or site inspection date? Chat directly with our solutions lead on WhatsApp.
+              Share your service requirement, site location, and preferred inspection date with our team on WhatsApp.
             </p>
             <a href="https://wa.me/971505049838?text=Hello%20Duotek%20Team,%20I%20would%20like%20to%20discuss%20a%20project%20in%20the%20UAE." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: #ffffff; padding: 10px 18px; border-radius: 100px; font-weight: 700; font-size: 13px; text-decoration: none;">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.652-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -271,7 +279,7 @@
             Project Inquiry Form
           </div>
           <h2>Send us your project scope</h2>
-          <p>Fill out the form below. Our engineers review your technical requirements and respond within one business day.</p>
+          <p>Share the essentials below so our team can route your request and prepare for a useful first conversation.</p>
 
           <form class="contact-form" id="contact-page-form" method="POST" action="https://api.web3forms.com/submit">
             <input type="hidden" name="access_key" value="c4aa15c7-6c6f-4710-814a-abb81bd245cd">
@@ -280,17 +288,17 @@
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div class="form-group">
               <label for="contact-page-name">Full Name / Company Name</label>
-              <input type="text" id="contact-page-name" name="name" required placeholder="e.g. Sarah Al Mansoori (ABC Fit-out Contracting)">
+              <input type="text" id="contact-page-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Al Mansoori (ABC Fit-out Contracting)">
             </div>
 
             <div class="form-group">
               <label for="contact-page-email">Business Email Address</label>
-              <input type="email" id="contact-page-email" name="email" required placeholder="contact@company.ae">
+              <input type="email" id="contact-page-email" name="email" required autocomplete="email" placeholder="contact@company.ae">
             </div>
 
             <div class="form-group">
               <label for="contact-page-phone">UAE Contact Number</label>
-              <input type="tel" id="contact-page-phone" name="phone" required placeholder="+971 50 123 4567">
+              <input type="tel" id="contact-page-phone" name="phone" required autocomplete="tel" placeholder="+971 50 123 4567">
             </div>
 
             <div class="form-group">
@@ -308,8 +316,7 @@
                 <option value="Server Installation & Configuration">Server Installation &amp; Configuration</option>
                 <option value="Business Email Solutions & Configuration">Business Email Solutions (Microsoft 365/Google)</option>
                 <option value="IT Networking Solutions">IT Networking Solutions (Routers/Firewalls/Wi-Fi)</option>
-                <!-- Removable: Digital Solutions Practice -->
-                <option value="Custom Software & Web Development">Custom Software &amp; Web Development (Digital Division)</option>
+                <option value="Custom Software & Web Development">Custom Software, Web &amp; Mobile Development</option>
               </select>
             </div>
 
@@ -333,7 +340,7 @@
     <div class="footer-top-banner">
       <div class="footer-statement">
         <h3>Building dependable technology for the UAE's <em>forward-thinking spaces.</em></h3>
-        <p>Enterprise IT infrastructure, structured cabling, smart security, and building automation delivered with uncompromising precision.</p>
+        <p>IT infrastructure, structured cabling, security, automation, and software delivered from assessment through handover and support.</p>
       </div>
       <div class="footer-top-actions">
         <a href="https://wa.me/971505049838?text=Hello%20Duotek%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20IT%20services." target="_blank" rel="noopener noreferrer" class="footer-top-whatsapp" title="WhatsApp Support">
@@ -348,13 +355,13 @@
       <!-- Col 1: Brand Identity & Social Presence -->
       <div class="footer-col footer-col-brand">
         <div class="footer-emblem-wrap">
-          <a href="index.html" class="footer-logo-link" aria-label="DUOTEK Home">
-            <img src="assets/images/duotek-logo-white.png" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38">
+          <a href="/" class="footer-logo-link" aria-label="DUOTEK Home">
+            <img src="/assets/images/duotek-logo-white.webp" alt="DUOTEK Information Technologies LLC" class="footer-logo-img" width="110" height="38" loading="lazy">
           </a>
         </div>
         <span class="footer-tagline-badge">Your IT Partner in the UAE</span>
         <p class="footer-desc">
-          Turnkey technology solutions provider based in Dubai, delivering reliable IT AMC, certified structured cabling, telephony, CCTV, and smart automation.
+          Dubai technology company delivering IT support, structured cabling, networking, telephony, CCTV, access control, automation, and custom software.
         </p>
         <div class="footer-socials" aria-label="Social media channels">
           <a href="https://www.facebook.com/share/1C9YsbggDi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Duotek Facebook">
@@ -369,9 +376,9 @@
         </div>
       </div>
 
-      <!-- Col 2: Dubai Headquarters -->
+      <!-- Col 2: Dubai Office -->
       <div class="footer-col">
-        <h4>Dubai Headquarters</h4>
+        <h4>Dubai Office</h4>
         <ul class="footer-address-list">
           <li>
             <div class="addr-icon">
@@ -389,7 +396,10 @@
             <div class="addr-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.25l-8 5-8-5V6l8 5 8-5v2.25z"/></svg>
             </div>
-            <a href="mailto:sales@duotek.ae">sales@duotek.ae</a>
+            <div>
+              <a href="mailto:sales@duotek.ae">sales@duotek.ae</a><br>
+              <a href="mailto:info@duotek.ae" style="font-size: 13px; color: var(--color-text-muted);">info@duotek.ae</a>
+            </div>
           </li>
           <li>
             <div class="addr-icon">
@@ -410,13 +420,14 @@
       <div class="footer-col">
         <h4>Core Solutions</h4>
         <ul class="footer-links-list">
-          <li><a href="services.html#service-card-A">IT AMC Maintenance</a></li>
-          <li><a href="services.html#service-card-B">Structured Cabling Cat6/6A</a></li>
-          <li><a href="services.html#service-card-C">Network Racks &amp; Servers</a></li>
-          <li><a href="services.html#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
-          <li><a href="services.html#service-card-F">CCTV Surveillance Systems</a></li>
-          <li><a href="services.html#service-card-G">Biometric Access Control</a></li>
-          <li><a href="services.html#service-card-H">Smart Home Automation</a></li>
+          <li><a href="/software">Custom Software Development</a></li>
+          <li><a href="/services#service-card-A">IT AMC Maintenance</a></li>
+          <li><a href="/services#service-card-B">Structured Cabling Cat6/6A</a></li>
+          <li><a href="/services#service-card-C">Network Racks &amp; Servers</a></li>
+          <li><a href="/services#service-card-D">IP Telephony &amp; 3CX PBX</a></li>
+          <li><a href="/services#service-card-F">CCTV Surveillance Systems</a></li>
+          <li><a href="/services#service-card-G">Biometric Access Control</a></li>
+          <li><a href="/services#service-card-H">Smart Home Automation</a></li>
         </ul>
       </div>
 
@@ -424,12 +435,13 @@
       <div class="footer-col">
         <h4>Explore &amp; Policies</h4>
         <ul class="footer-links-list">
-          <li><a href="about.html">About Duotek Group</a></li>
-          <li><a href="about.html#industries">Industries We Serve</a></li>
-          <li><a href="about.html#approach">6-Step Methodology</a></li>
-          <li><a href="contact.html">Request Project Pricing</a></li>
+          <li><a href="/about">About Duotek Group</a></li>
+          <li><a href="/about#industries">Industries We Serve</a></li>
+          <li><a href="/about#approach">6-Step Methodology</a></li>
+          <li><a href="/careers">Careers at Duotek</a></li>
+          <li><a href="/contact">Request Project Pricing</a></li>
           <li><a href="#" onclick="alert('Duotek Information Technologies LLC Privacy Policy: We value and protect customer data privacy under UAE regulatory standards.'); return false;">Privacy Statement</a></li>
-          <li><a href="#" onclick="alert('Duotek Information Technologies LLC Terms of Service: Professional service delivery and technical agreements.'); return false;">Terms of Service</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
@@ -438,11 +450,17 @@
     <div class="footer-bottom-row">
       <p>© 2026 DUOTEK Information Technologies LLC • Commercial License • Dubai, United Arab Emirates.</p>
       <div class="footer-legal-links">
-        <a href="about.html">About</a>
+        <a href="/about">About</a>
         <span>•</span>
-        <a href="services.html">Services</a>
+        <a href="/services">IT &amp; ELV Services</a>
         <span>•</span>
-        <a href="contact.html">Contact</a>
+        <a href="/software">Software</a>
+        <span>•</span>
+        <a href="/careers">Careers</a>
+        <span>•</span>
+        <a href="/contact">Contact</a>
+        <span>•</span>
+        <a href="/terms">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
@@ -470,7 +488,7 @@
       <button type="button" class="contact-close-btn" aria-label="Close dialog">×</button>
       <div class="modal-eyebrow">Duotek Group • UAE</div>
       <h3 id="modal-title">Let's talk technology.</h3>
-      <p>Tell us about your spaces, systems, or project scope. Our technical team responds within one business day.</p>
+      <p>Tell us about your site, systems, users, or software requirement. Our team will review the scope and follow up with the appropriate next step.</p>
       
       <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
         <input type="hidden" name="access_key" value="c4aa15c7-6c6f-4710-814a-abb81bd245cd">
@@ -479,17 +497,17 @@
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         <div class="form-group">
           <label for="contact-name">Your Name / Company</label>
-          <input type="text" id="contact-name" name="name" required placeholder="e.g. Sarah Al Mansoori (ABC Contracting)">
+          <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Al Mansoori (ABC Contracting)">
         </div>
 
         <div class="form-group">
           <label for="contact-email">Email Address</label>
-          <input type="email" id="contact-email" name="email" required placeholder="contact@company.ae">
+          <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="contact@company.ae">
         </div>
 
         <div class="form-group">
           <label for="contact-phone">Phone Number</label>
-          <input type="tel" id="contact-phone" name="phone" placeholder="+971 50 123 4567">
+          <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+971 50 123 4567">
         </div>
 
         <div class="form-group">
@@ -508,7 +526,7 @@
             <option value="Business Email Solutions & Configuration">Business Email Solutions (Microsoft 365/Google)</option>
             <option value="IT Networking Solutions">IT Networking Solutions (Routers/Firewalls/Wi-Fi)</option>
             <!-- Removable: Digital Solutions Practice -->
-            <option value="Custom Software & Web Development">Custom Software &amp; Web Development (Digital Division)</option>
+            <option value="Custom Software & Web Development">Custom Software, Web &amp; Mobile Development</option>
           </select>
         </div>
 
@@ -530,6 +548,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 
   <!-- Application Bootstrap -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>
