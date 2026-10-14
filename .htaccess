@@ -23,8 +23,7 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ https://duotek.ae/$1/ [R=301,L]
 
 # 5. Clean aliases and friendly URLs
-RewriteRule ^software/?$ /software/ [R=301,L]
-RewriteRule ^software-development/?$ /software/ [R=301,L]
+RewriteRule ^software-development(/.*)?$ /software/ [R=301,L]
 RewriteRule ^terms-(and-conditions|of-service)/?$ /terms/ [R=301,L]
 RewriteRule ^(jobs|careers-at-duotek)/?$ /careers/ [R=301,L]
 
